@@ -11,10 +11,24 @@
 |
 */
 
+/* 
+ * Register Off
+*/
+Auth::routes([
+    'register' => false,
+]);
+
+/* 
+ * /Home
+*/
+
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
