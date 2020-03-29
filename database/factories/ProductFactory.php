@@ -10,6 +10,6 @@ $factory->define(Product::class, function (Faker $faker) {
         'title' => $faker->sentence($nbWords = 5, $variableNbWords = true),
         'content' => $faker->text($maxNbChars = 200) ,
         'amount'  => $faker->randomFloat($nbMaxDecimals = 2, $min = 100, $max = 900),
-        'image'  => null,
+        'image'  => 'image.jpg',
     ];
 });
