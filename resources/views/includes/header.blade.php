@@ -1,3 +1,6 @@
-<div class="container-fluid">
-    <p>Header</p>
-</div>
+<header class="container-fluid">
+    
+    {{-- Slider --}}
+    @include('slides.index')
+
+</header>
