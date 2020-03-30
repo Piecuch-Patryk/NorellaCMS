@@ -27,6 +27,13 @@ Route::get('/', [
 ]);
 
 
+/* 
+ * /Product
+*/
+Route::get('produkty', [
+    'uses' => 'ProductController@index',
+    'as' => 'product.index',
+]);
 
 
 // Route::get('/', function () {
