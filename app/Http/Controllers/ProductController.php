@@ -82,14 +82,30 @@ class ProductController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display products' prices.
      *
-     * @param  int  $id
+     * @uses \App\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showPrice()
     {
-        //
+        $products = Product::orderBy('updated_at', 'DESC')->get();
+        return view('product.showprice', ['products' => $products]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Product $product
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Product $product)
+    {
+        $products = Product::where('id', '!=', $product->id)->get();
+        return view('product.show', [
+                'product' => $product,
+                'products' => $products
+            ]);
     }
 
     /**

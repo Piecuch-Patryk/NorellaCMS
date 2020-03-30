@@ -45,6 +45,16 @@ Route::post('zapisz-oferte', [
     'as' => 'product.store',
     'middleware' => 'auth',
 ]);
+// showPrices
+Route::get('cennik-uslug', [
+    'uses' => 'ProductController@showPrice',
+    'as' => 'product.showprice',
+]);
+// show
+Route::get('oferta-norella/{product}', [
+    'uses' => 'ProductController@show',
+    'as' => 'product.show',
+]);
 // edit
 Route::get('edytuj-oferte/{product}/{id}', [
     'uses' => 'ProductController@edit',
