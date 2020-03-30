@@ -105,12 +105,24 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param   \App\Product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        if($request->image) {
+            Storage::delete('products/' . $product->image);
+            $newImage = $this->resizeImage($request->file('image'));
+            $name = uniqid() . '.png';
+            Storage::disk('public')->put('products/' . $name, $newImage);
+            $product->image = $name;
+        }
+        $product->title = $request->title;
+        $product->content = $request->content;
+        $product->amount = $request->amount;
+        $product->save();
+
+        return redirect()->route('product.index')->with('success', 'Wybrana oferta została edytowana.');
     }
 
     /**

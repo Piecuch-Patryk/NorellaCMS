@@ -46,7 +46,7 @@ Route::post('zapisz-oferte', [
     'middleware' => 'auth',
 ]);
 // edit
-Route::get('edytuj-oferte/{product}', [
+Route::get('edytuj-oferte/{product}/{id}', [
     'uses' => 'ProductController@edit',
     'as' => 'product.edit',
     'middleware' => 'auth',
