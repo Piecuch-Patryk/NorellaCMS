@@ -128,11 +128,13 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        Storage::delete('products/' . $product->image);
+        $product->delete();
+        return redirect()->back()->with('success', 'Wybrana oferta została usunięta.');
     }
 }

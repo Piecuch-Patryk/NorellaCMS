@@ -57,7 +57,12 @@ Route::put('zapisz-oferte/{product}', [
     'as' => 'product.update',
     'middleware' => 'auth',
 ]);
-
+// destroy
+Route::delete('usun-oferte/{product}', [
+    'uses' => 'ProductController@destroy',
+    'as' => 'product.destroy',
+    'middleware' => 'auth',
+]);
 
 /* 
  * /Slide
