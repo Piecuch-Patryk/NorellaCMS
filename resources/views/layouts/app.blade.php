@@ -22,7 +22,7 @@
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 </head>
-<body>
+<body class="pt-5">
     @include('includes.navigation')
     @include('includes.header')
 

@@ -2,6 +2,11 @@
 
 @section('title', 'Strona główna')
 
+@section('slider')
+    @include('slides.index')
+@endsection
+
+
 @section('content')
 <main class="container-fluid">
     <div class="row text-center py-3">
