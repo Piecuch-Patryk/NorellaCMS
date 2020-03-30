@@ -32,12 +32,14 @@ class ProductController extends Controller
         //
     }
 
-/* 
-
-    Temp-function
-    !!DRY!!
-
-*/
+    /*
+    * Resize the specified resource.
+    * 
+    * Helper class \App\Helpers\Resolution returns defined resolution for new image.
+    * 
+    * @param Source image   $img
+    * @return Resized image $resizedImg
+    */
     private function resizeImage($img)
     {
         $resolution = Resolution::imgProduct();
