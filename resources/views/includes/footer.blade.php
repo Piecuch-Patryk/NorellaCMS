@@ -5,9 +5,9 @@
     <div class="col-12 col-md-8 mx-md-auto">
         <ul class="list-unstyled d-flex flex-wrap justify-content-around footer-menu">
             <li><a href="{{ route('home.index') }}" class="d-block px-2 mx-2 my-1 text-light">strona główna</a></li>
-            <li><a href="#" class="d-block px-2 mx-2 my-1 text-light">oferta</a></li>
-            <li><a href="#" class="d-block px-2 mx-2 my-1 text-light">cennik</a></li>
-            <li><a href="#" class="d-block px-2 mx-2 my-1 text-light">opinie</a></li>
+            <li><a href="{{ route('product.index') }}" class="d-block px-2 mx-2 my-1 text-light">oferta</a></li>
+            <li><a href="{{ route('product.showprice') }}" class="d-block px-2 mx-2 my-1 text-light">cennik</a></li>
+            <li><a href="{{ route('review.index') }}" class="d-block px-2 mx-2 my-1 text-light">opinie</a></li>
             <li><a href="#" class="d-block px-2 mx-2 my-1 text-light">galeria</a></li>
             <li><a href="#" class="d-block px-2 mx-2 my-1 text-light">o nas</a></li>
         </ul>
