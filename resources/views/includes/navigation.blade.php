@@ -17,8 +17,8 @@
             <li class="nav-item {{ Route::is('product.showprice') ? 'active' : '' }}">
                 <a class="nav-link mx-md-3" href="{{ route('product.showprice') }}">Cennik</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link mx-md-3" href="#">Opinie</a>
+            <li class="nav-item {{ Route::is('review.index') ? 'active' : '' }}">
+                <a class="nav-link mx-md-3" href="{{ route('review.index') }}">Opinie</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link mx-md-3" href="#">Galeria</a>

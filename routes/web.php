@@ -13,6 +13,7 @@
 
 /* 
  * Register Off
+ * 
 */
 Auth::routes([
     'register' => false,
@@ -20,6 +21,7 @@ Auth::routes([
 
 /* 
  * /Home
+ * 
 */
 // index
 Route::get('/', [
@@ -29,6 +31,7 @@ Route::get('/', [
 
 /* 
  * /Product
+ * 
 */
 // index
 Route::get('oferta', [
@@ -75,7 +78,18 @@ Route::delete('usun-oferte/{product}', [
 ]);
 
 /* 
+ * Review
+ * 
+*/
+// index
+Route::get('opinie-naszych-klientow', [
+    'uses' => 'ReviewController@index',
+    'as' => 'review.index',
+]);
+
+/*
  * /Slide
+ * 
 */
 // index
 Route::get('pokaz-slajdów', [
