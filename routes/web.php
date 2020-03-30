@@ -55,3 +55,9 @@ Route::post('zapisz-slajd', [
     'as' => 'slide.store',
     'middleware' => 'auth',
 ]);
+// destroy
+Route::delete('usuń-wybrany-slajd/{slide}', [
+    'uses' => 'SlideController@destroy',
+    'as' => 'slide.destroy',
+    'middleware' => 'auth',
+]);

@@ -15,7 +15,7 @@
             <div class="col-12 col-md-5 m-3 p-3 border border-pink rounded">
                 <img src="{{ asset('storage/slides/' . $slide->name) }}" class="img-fluid rounded box-shadow" alt="Carousel image">
                 <div class=" text-center mt-3">
-                    <form action="#" method="POST">
+                <form action="{{ route('slide.destroy', ['slide' => $slide]) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger">Usuń</button>

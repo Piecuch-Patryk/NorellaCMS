@@ -112,6 +112,20 @@ class SlideController extends Controller
      */
     public function destroy(Slide $slide)
     {
-        //
+        if(Storage::disk('public')->exists('slides/' . $slide->name)){
+            $resolutions = Resolution::get();
+            foreach($resolutions as $resolution){
+                $name = explode('_', $slide->name);
+                $name = $name[1];
+                $resolutionKey = array_search($resolution, $resolutions);
+                $fullName = $resolutionKey . '_' . $name;
+                
+                Storage::disk('public')->delete('slides/' . $fullName);
+                Slide::where('name', '=', $fullName)->delete();
+            }
+            return redirect()->back()->withSuccess('Wybrane zdjęcie zostało usunięte.');
+        }else {
+            return redirect()->back()->with('error', 'Wystąpił błąd, spróbuj ponownie.');
+        }
     }
 }
