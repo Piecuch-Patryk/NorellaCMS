@@ -13,12 +13,8 @@ class SlidesTableSeeder extends Seeder
     public function run()
     {
         $slide = new Slide();
-        $slide->name = '66147_314047108758495_4297658955865886670_n.jpg';
-        $slide->save();
-
-        
-        $slide = new Slide();
-        $slide->name = '10506800_314045672091972_8250207559448199585_o.jpg';
+        $slide->name = 'lg_66147_314047108758495_4297658955865886670_n.jpg';
+        $slide->resolution = 'lg';
         $slide->save();
     }
 }

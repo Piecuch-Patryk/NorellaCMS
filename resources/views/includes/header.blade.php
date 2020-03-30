@@ -1,4 +1,4 @@
-<header class="container-fluid">
+<header class="container-fluid px-0">
     
     {{-- Slider --}}
     @yield('slider', '')

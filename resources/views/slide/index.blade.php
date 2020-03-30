@@ -7,14 +7,13 @@
     <div class="row text-center py-4">
         <div class="col-12">
             <h1>Dostosuj pokaz slajdów ze strony głównej</h1>
-            <p>Slajdy można dodawać, usuwać lub edytować. W prosty sposób można zmienić tytuł lub zdjęcie.</p>
-            <a href="#" class="btn btn-success">Dodaj nowy slajd</a>
+            <a href="{{ route('slide.add') }}" class="btn btn-success">Dodaj nowy slajd</a>
         </div>
     </div>
     <div class="row justify-content-center px-2">
         @foreach ($slides as $slide)
             <div class="col-12 col-md-5 m-3 p-3 border border-pink rounded">
-                <img src="{{ asset('storage/assets/slides/' . $slide->name) }}" class="img-fluid rounded box-shadow" alt="Carousel image">
+                <img src="{{ asset('storage/slides/' . $slide->name) }}" class="img-fluid rounded box-shadow" alt="Carousel image">
                 <div class=" text-center mt-3">
                     <form action="#" method="POST">
                         @csrf

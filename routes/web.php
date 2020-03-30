@@ -21,6 +21,7 @@ Auth::routes([
 /* 
  * /Home
 */
+// index
 Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'home.index',
@@ -29,6 +30,7 @@ Route::get('/', [
 /* 
  * /Product
 */
+// index
 Route::get('produkty', [
     'uses' => 'ProductController@index',
     'as' => 'product.index',
@@ -37,8 +39,19 @@ Route::get('produkty', [
 /* 
  * /Slide
 */
+// index
 Route::get('pokaz-slajdów', [
     'uses' => 'SlideController@index',
     'as' => 'slide.index',
+    'middleware' => 'auth',
+]);
+// create
+Route::view('dodaj-nowy-slajd', 'slide.add')
+    ->name('slide.add')
+    ->middleware('auth');
+// store
+Route::post('zapisz-slajd', [
+    'uses' => 'SlideController@store',
+    'as' => 'slide.store',
     'middleware' => 'auth',
 ]);
