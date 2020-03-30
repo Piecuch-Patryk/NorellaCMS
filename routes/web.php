@@ -31,18 +31,30 @@ Route::get('/', [
  * /Product
 */
 // index
-Route::get('produkty', [
+Route::get('oferta', [
     'uses' => 'ProductController@index',
     'as' => 'product.index',
 ]);
 // create
-Route::view('dodaj-nowy-produkt', 'product.create')
+Route::view('dodaj-nowa-oferte', 'product.create')
     ->name('product.create')
     ->middleware('auth');
 // store
-Route::post('zapisz-produkt', [
+Route::post('zapisz-oferte', [
     'uses' => 'ProductController@store',
     'as' => 'product.store',
+    'middleware' => 'auth',
+]);
+// edit
+Route::get('edytuj-oferte/{product}', [
+    'uses' => 'ProductController@edit',
+    'as' => 'product.edit',
+    'middleware' => 'auth',
+]);
+// update
+Route::put('zapisz-oferte/{product}', [
+    'uses' => 'ProductController@update',
+    'as' => 'product.update',
     'middleware' => 'auth',
 ]);
 
