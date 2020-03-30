@@ -40,4 +40,5 @@ Route::get('produkty', [
 Route::get('pokaz-slajdów', [
     'uses' => 'SlideController@index',
     'as' => 'slide.index',
+    'middleware' => 'auth',
 ]);
