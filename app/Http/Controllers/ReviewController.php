@@ -15,7 +15,7 @@ class ReviewController extends Controller
     public function index()
     {
         $reviews = Review::orderBy('updated_at', 'DESC')->take(5)->get();
-        return view('review.index', ['review' => $reviews]);
+        return view('review.index', ['reviews' => $reviews]);
     }
 
     /**
@@ -81,6 +81,7 @@ class ReviewController extends Controller
      */
     public function destroy(Review $review)
     {
-        //
+        $review->delete();
+        return redirect()->route('review.index')->with('success', 'Komentarz usunięty.');
     }
 }

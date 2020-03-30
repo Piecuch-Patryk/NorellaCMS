@@ -4,8 +4,8 @@
 
 @section('content')
 <main class="container-fluid">
-    
-    @include('success')
+
+    @include('shared.success')
 
     <div class="row py-4 text-center">
         <div class="col-12">
@@ -28,7 +28,7 @@
 
                 @auth    
                 <div class="text-right">
-                    <form action="" method="POST">
+                    <form action="{{ route('review.destroy', ['review' => $review]) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-sm btn-danger">Usuń opinię</button>

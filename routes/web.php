@@ -86,6 +86,12 @@ Route::get('opinie-naszych-klientow', [
     'uses' => 'ReviewController@index',
     'as' => 'review.index',
 ]);
+// destroy
+Route::delete('usun-komentarz/{review}', [
+    'uses' => 'ReviewController@destroy',
+    'as' => 'review.destroy',
+    'middleware' => 'auth',
+]);
 
 /*
  * /Slide
