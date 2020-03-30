@@ -4,12 +4,17 @@
 
 @section('content')
 <main class="container-fluid">
+    
+    @include('shared.success')
+    @include('shared.fail')
+
     <div class="row text-center py-4">
         <div class="col-12">
             <h1>Dostosuj pokaz slajdów ze strony głównej</h1>
             <a href="{{ route('slide.add') }}" class="btn btn-success">Dodaj nowy slajd</a>
         </div>
     </div>
+
     <div class="row justify-content-center px-2">
         @foreach ($slides as $slide)
             <div class="col-12 col-md-5 m-3 p-3 border border-pink rounded">
@@ -24,5 +29,6 @@
             </div>
         @endforeach
     </div>
+
 </main>
 @endsection

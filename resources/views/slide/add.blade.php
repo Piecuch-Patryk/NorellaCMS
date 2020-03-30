@@ -4,18 +4,15 @@
 
 @section('content')
 <main class="container-fluid">
-    {{-- @if(session('success'))
-    <div class="row bg-success text-light text-center">
-        <div class="col-12">
-            <p class="mb-0">{{ session('success') }}</p>
-        </div>
-    </div>
-    @endif --}}
+
+    @include('shared.fail')
+
     <div class="row py-4 text-center">
         <div class="col-12">
             <h1 class="mb-0">Dodaj zdjęcie do pokazu slajdów</h1>
         </div>
     </div>
+
     <div class="row mx-2 mb-3">
         <div class="col-12 col-md-7 mx-md-auto border border-pink rounded p-3">
             <div class="text-center">
@@ -26,7 +23,7 @@
                 <div class="form-group text-center">
                     <label for="image" id="imgBtn" class="btn-sm btn-info btn-label text-light">Dodaj zdjęcie</label>
                     <input id="image" name="image" type="file" class="d-none">
-                    @includeWhen($errors->get('image'), 'shared.error', ['error_name' => 'image'])
+                    @include('shared.error')
                 </div>
                 <div class="form-group text-center mb-0">
                     <button class="btn btn-pink text-light px-4">Zapisz</button>
@@ -34,6 +31,7 @@
             </form>
         </div>
     </div>
+
 </main>
 @endsection
 

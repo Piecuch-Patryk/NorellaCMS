@@ -124,7 +124,7 @@ class SlideController extends Controller
                 Storage::disk('public')->delete('slides/' . $fullName);
                 Slide::where('name', '=', $fullName)->delete();
             }
-            return redirect()->back()->withSuccess('Wybrane zdjęcie zostało usunięte.');
+            return redirect()->back()->with('success', 'Wybrane zdjęcie zostało usunięte.');
         }else {
             return redirect()->back()->with('error', 'Wystąpił błąd, spróbuj ponownie.');
         }
