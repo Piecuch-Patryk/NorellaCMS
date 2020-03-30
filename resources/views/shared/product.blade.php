@@ -1,16 +1,20 @@
 <div class="row d-flex justify-content-center">
+    
     @foreach ($products as $product)
     <div class="col-11 col-md-8 col-lg-3 col-xl-2 mx-lg-3 my-3 p-3 bg-pink rounded box-shadow">
+
         @if ($product->image)
         <div class="text-center">
-            <img src="{{ asset('storage/assets/product-img/' . $product->image) }}" class="img-fluid rounded-lg" alt="Zdjęcie produktu">
+            <img src="{{ asset('storage/products/' . $product->image) }}" class="img-fluid rounded-lg" alt="Zdjęcie produktu">
         </div>
         @endif
+
         <div class="product-bg p-2 mt-3 rounded">
             <h3 class="py-2 text-center">{{ $product->title }}</h3>
             <p>{{ $product->content }}</p>
             <p class="text-center">{{ $product->amount }} zł</p>
         </div>
+
         {{-- Auth --}}
         @auth
         <div class="d-flex justify-content-around pt-2">
@@ -22,6 +26,8 @@
             </form>
         </div>
         @endauth
+
     </div>
     @endforeach
+
 </div>

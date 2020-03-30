@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Http\Requests\ProductRequest;
+use Illuminate\Support\Facades\Storage;
+use Image as Intervention;
+use App\Helpers\Resolution;
 
 class ProductController extends Controller
 {
@@ -28,15 +32,51 @@ class ProductController extends Controller
         //
     }
 
+/* 
+
+    Temp-function
+    !!DRY!!
+
+*/
+    private function resizeImage($img)
+    {
+        $resolution = Resolution::imgProduct();
+        $resizedImg = Intervention::make($img)
+        ->widen($resolution, function($constraint){
+            $constraint->upsize();
+        })
+        ->encode('png');
+
+        return $resizedImg;
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\ProductRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        //
+        if($request->hasFile('image')){
+            request()->validate([
+                'image' => 'image|mimes:jpeg,png,jpg',
+            ]);
+            $product = new Product();
+            $name = uniqid() . '.png';
+            $img  = $this->resizeImage($request->file('image'));
+            Storage::disk('public')->put('products/' . $name, $img);
+            $product->image = $name;
+            $product->title = $request->title;
+            $product->content = $request->content;
+            $product->amount = $request->amount;
+            $product->save();
+
+            return redirect()->route('product.index')->with('success', 'Oferta została dodana.');
+        }else {
+            return redirect()->route('product.index')->with('error', 'Oferta musi posiadać obrazek.');
+        }
     }
 
     /**

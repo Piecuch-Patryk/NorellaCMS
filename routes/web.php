@@ -35,6 +35,17 @@ Route::get('produkty', [
     'uses' => 'ProductController@index',
     'as' => 'product.index',
 ]);
+// create
+Route::view('dodaj-nowy-produkt', 'product.create')
+    ->name('product.create')
+    ->middleware('auth');
+// store
+Route::post('zapisz-produkt', [
+    'uses' => 'ProductController@store',
+    'as' => 'product.store',
+    'middleware' => 'auth',
+]);
+
 
 /* 
  * /Slide

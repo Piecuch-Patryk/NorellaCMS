@@ -135,6 +135,10 @@ return [
         ],
     ],
 
+    // Custom
+    'text' => 'The :attribute must not be empty.',
+    'price' => 'The :attribute must not be empty.',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
