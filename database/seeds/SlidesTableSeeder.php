@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Slide;
+use App\Helpers\Resolution;
 
 class SlidesTableSeeder extends Seeder
 {
@@ -12,9 +13,13 @@ class SlidesTableSeeder extends Seeder
      */
     public function run()
     {
-        $slide = new Slide();
-        $slide->name = 'lg_66147_314047108758495_4297658955865886670_n.jpg';
-        $slide->resolution = 'lg';
-        $slide->save();
+        $resolutions = Resolution::get();
+        foreach($resolutions as $resolution){
+            $resolutionKey = array_search($resolution, $resolutions);
+            $slide = new Slide();
+            $slide->name = $resolutionKey . '_66147_314047108758495_4297658955865886670_n.jpg';
+            $slide->resolution = $resolutionKey;
+            $slide->save();
+        }
     }
 }
