@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Slide;
 
 class HomeController extends Controller
 {
@@ -25,9 +26,11 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::orderBy('updated_at', 'DESC')->take(5)->get();
+        $slides = Slide::orderBy('updated_at', 'DESC')->get();
 
         return view('home.index', [
             'products' => $products,
+            'slides' => $slides,
         ]);
     }
 }

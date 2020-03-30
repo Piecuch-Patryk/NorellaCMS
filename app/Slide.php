@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Slide extends Model
 {
     protected $fillable = [
-        'title', 'content', 'amount'
+        'name',
     ];
 }

@@ -26,7 +26,6 @@ Route::get('/', [
     'as' => 'home.index',
 ]);
 
-
 /* 
  * /Product
 */
@@ -35,10 +34,10 @@ Route::get('produkty', [
     'as' => 'product.index',
 ]);
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-// Route::get('/home', 'HomeController@index')->name('home');
+/* 
+ * /Slide
+*/
+Route::get('pokaz-slajdów', [
+    'uses' => 'SlideController@index',
+    'as' => 'slide.index',
+]);

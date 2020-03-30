@@ -33,7 +33,7 @@
                 Admin
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Pokaz slajdów</a>
+                    <a class="dropdown-item" href="{{ route('slide.index') }}">Pokaz slajdów</a>
                     <a class="dropdown-item" href="#">Zmień hasło</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('logout') }}"
