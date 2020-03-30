@@ -9,9 +9,6 @@
 
     <title>@yield('title')</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -22,7 +19,7 @@
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 </head>
-<body class="pt-5">
+<body>
     @include('includes.navigation')
     @include('includes.header')
 
@@ -30,6 +27,10 @@
     
     @include('includes.footer')
 
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/navSpaceFix.js') }}"></script>
     @yield('script', '')
 </body>
 </html>
