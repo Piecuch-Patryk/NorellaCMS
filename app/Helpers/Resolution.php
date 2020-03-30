@@ -4,7 +4,7 @@ namespace App\Helpers;
 use Jenssegers\Agent\Agent;
 
 class Resolution {
-    public static function index()
+    public static function current()
     {
         $agent = new Agent();
         if($agent->isPhone()) return 'sm';

@@ -18,7 +18,8 @@ class SlideController extends Controller
      */
     public function index()
     {
-        $slides = Slide::orderBy('updated_at', 'DESC')->get();
+        $resolution = Resolution::current();
+        $slides = Slide::orderBy('updated_at', 'DESC')->where('resolution', '=', $resolution)->get();
         return view('slide.index', ['slides' => $slides]);
     }
 
