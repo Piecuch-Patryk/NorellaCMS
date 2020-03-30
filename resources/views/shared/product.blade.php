@@ -14,8 +14,8 @@
         {{-- Auth --}}
         @auth
         <div class="d-flex justify-content-around pt-2">
-            <a href="{{ route('product.edit', ['product' => $product]) }}" class="btn btn-sm btn-info btn-shadow-light px-3">Edytuj</a>
-            <form action="{{ route('product.delete', ['product' => $product]) }}" method="POST" class="d-inline-block ml-5 btn-shadow-light">
+            <a href="#" class="btn btn-sm btn-info btn-shadow-light px-3">Edytuj</a>
+            <form action="#" method="POST" class="d-inline-block ml-5 btn-shadow-light">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-sm btn-danger px-3">Usuń</button>
