@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col text-center">
-            <a href="" class="btn btn-success">Dodaj opinię</a>
+            <a href="{{ route('review.create') }}" class="btn btn-success">Dodaj opinię</a>
         </div>
     </div>
 

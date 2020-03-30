@@ -86,6 +86,14 @@ Route::get('opinie-naszych-klientow', [
     'uses' => 'ReviewController@index',
     'as' => 'review.index',
 ]);
+// create
+Route::view('dodaj-swoja-opinie', 'review.create')
+    ->name('review.create');
+// store
+Route::post('zapisz-komentarz', [
+    'uses' => 'ReviewController@store',
+    'as' => 'review.store',
+]);
 // destroy
 Route::delete('usun-komentarz/{review}', [
     'uses' => 'ReviewController@destroy',

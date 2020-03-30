@@ -36,7 +36,8 @@ class ReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Review::create($request->all());
+        return redirect()->route('review.index')->with('success', 'Dziękujemy za podzielenie się Twoją opinią.');
     }
 
     /**
