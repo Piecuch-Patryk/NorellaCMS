@@ -1,4 +1,4 @@
-@if ($messages = $errors->get('image'))
+@if ($messages = $errors->get($name))
 <p class="text-danger">
     @foreach ($messages as $message)
         {{ $message }}

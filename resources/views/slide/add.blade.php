@@ -23,7 +23,7 @@
                 <div class="form-group text-center">
                     <label for="image" id="imgBtn" class="btn-sm btn-info btn-label text-light">Dodaj zdjęcie</label>
                     <input id="image" name="image" type="file" class="d-none">
-                    @include('shared.error')
+                    @include('shared.error', ['name' => 'image'])
                 </div>
                 <div class="form-group text-center mb-0">
                     <button class="btn btn-pink text-light px-4">Zapisz</button>
