@@ -17,7 +17,7 @@
     @auth
     <div class="row text-center">
         <div class="col-12">
-            <a href="" class="btn btn-sm btn-success px-3">Dodaj zdjęcie</a>
+            <a href="{{ route('gallery.create') }}" class="btn btn-sm btn-success px-3">Dodaj zdjęcie</a>
         </div>
     </div>
     @endauth

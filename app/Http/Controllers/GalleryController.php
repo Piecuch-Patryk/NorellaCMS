@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Gallery;
 use Illuminate\Http\Request;
 use App\Helpers\Resolution;
+use App\Http\Requests\ImageRequest;
+use Image as Intervention;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
@@ -38,7 +41,34 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->hasFile('image'))
+        {
+            request()->validate([
+                'image' => 'image|mimes:jpeg,png,jpg',
+            ]);
+            $name = uniqid() . '.png';
+            $resolutions = Resolution::get();
+
+            foreach(Resolution::get() as $resolution){
+                $Image = new Gallery();
+                $resolutionKey = array_search($resolution, $resolutions);
+                $fullName = $resolutionKey . '_' . $name;
+                $img  = Intervention::make($request->file('image'))
+                ->widen($resolution, function($constraint){
+                    $constraint->upsize();
+                })
+                ->encode('png');
+                Storage::disk('public')->put('gallery/' . $fullName, $img);
+
+                $Image->name = $fullName;
+                $Image->resolution = $resolutionKey;
+                $Image->save();
+            }
+
+            return redirect()->route('gallery.index')->with('success', 'Zdjęcie zostało dodane.');
+        }else {
+            return redirect()->back()->with('error', 'Wystąpił problem, spróbuj ponownie.');
+        }
     }
 
     /**

@@ -110,7 +110,16 @@ Route::get('galeria-zdjec', [
     'uses' => 'GalleryController@index',
     'as' => 'gallery.index',
 ]);
-
+// create
+Route::view('dodaj-zdjecie-do-galerii', 'gallery.create')
+    ->name('gallery.create')
+    ->middleware('auth');
+// store
+Route::post('zapisz-zdjecie', [
+    'uses' => 'GalleryController@store',
+    'as' => 'gallery.store',
+    'middleware' => 'auth',
+]);
 
 /*
  * /Slide
