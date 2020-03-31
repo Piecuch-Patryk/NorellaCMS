@@ -32,7 +32,7 @@
                     </figure>
                 </button>
                 @auth
-                <form action="" method="POST">
+                <form action="{{ route('gallery.destroy', ['image' => $images[$i]]) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-sm btn-danger my-2">Usuń zdjęcie</button>

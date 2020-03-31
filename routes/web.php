@@ -120,6 +120,12 @@ Route::post('zapisz-zdjecie', [
     'as' => 'gallery.store',
     'middleware' => 'auth',
 ]);
+// destroy
+Route::delete('usun-zdjecie-z-galerii/{image}', [
+    'uses' => 'GalleryController@destroy',
+    'as' => 'gallery.destroy',
+    'middleware' => 'auth',
+]);
 
 /*
  * /Slide

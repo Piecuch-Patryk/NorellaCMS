@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Gallery;
 use Illuminate\Http\Request;
 use App\Helpers\Resolution;
-use App\Http\Requests\ImageRequest;
+use App\Http\Requests\GalleryRequest;
 use Image as Intervention;
 use Illuminate\Support\Facades\Storage;
 
@@ -36,10 +36,10 @@ class GalleryController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  App\Http\Requests\GalleryRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GalleryRequest $request)
     {
         if($request->hasFile('image'))
         {
@@ -108,11 +108,25 @@ class GalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Gallery  $gallery
+     * @param  \App\Gallery  $image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gallery $gallery)
+    public function destroy(Gallery $image)
     {
-        //
+        if(Storage::disk('public')->exists('gallery/'.$image->name)){
+            $resolutions = Resolution::get();
+            foreach($resolutions as $resolution){
+                $name = explode('_', $image->name);
+                $name = $name[1];
+                $resolutionKey = array_search($resolution, $resolutions);
+                $fullName = $resolutionKey . '_' . $name;
+                
+                Storage::disk('public')->delete('gallery/' . $fullName);
+                Gallery::where('name', '=', $fullName)->delete();
+            }
+            return redirect()->back()->with('success', 'Wybrane zdjęcie zostało usunięte.');
+        }else {
+            return redirect()->back()->with('error', 'Wystąpił błąd, spróbuj ponownie.');
+        }
     }
 }
