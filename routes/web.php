@@ -101,6 +101,17 @@ Route::delete('usun-komentarz/{review}', [
     'middleware' => 'auth',
 ]);
 
+/* 
+ *
+ * /Gallery
+*/
+// index
+Route::get('galeria-zdjec', [
+    'uses' => 'GalleryController@index',
+    'as' => 'gallery.index',
+]);
+
+
 /*
  * /Slide
  * 

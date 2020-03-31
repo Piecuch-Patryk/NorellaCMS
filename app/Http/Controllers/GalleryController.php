@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Gallery;
 use Illuminate\Http\Request;
+use App\Helpers\Resolution;
 
 class GalleryController extends Controller
 {
@@ -14,7 +15,9 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        //
+        $resolution = Resolution::current();
+        $images = Gallery::orderBy('updated_at', 'DESC')->where('resolution', $resolution)->get();
+        return view('gallery.index', ['images' => $images]);
     }
 
     /**
