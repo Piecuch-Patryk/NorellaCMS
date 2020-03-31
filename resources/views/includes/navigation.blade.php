@@ -23,8 +23,8 @@
             <li class="nav-item {{ Route::is('gallery.index') ? 'active' : '' }}">
                 <a class="nav-link mx-md-3" href="{{ route('gallery.index') }}">Galeria</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link mx-md-3" href="#">O nas</a>
+            <li class="nav-item {{ Route::is('about.index') ? 'active' : '' }}">
+                <a class="nav-link mx-md-3" href="{{ route('about.index') }}">O nas</a>
             </li>
             {{-- Admin only --}}
             @auth

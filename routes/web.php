@@ -127,6 +127,13 @@ Route::delete('usun-zdjecie-z-galerii/{image}', [
     'middleware' => 'auth',
 ]);
 
+/* 
+ * /About
+*/
+// index
+Route::view('o-nas', 'about.index')
+    ->name('about.index');
+
 /*
  * /Slide
  * 
