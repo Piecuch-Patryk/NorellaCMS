@@ -12,12 +12,17 @@
 */
 
 /* 
- * Register Off
+ * /Admin
  * 
 */
+// register off
 Auth::routes([
     'register' => false,
 ]);
+// reset password
+Route::view('zmien-haslo', 'auth.passwords.reset')
+    ->name('auth.passwords.reset')
+    ->middleware('auth');
 
 /* 
  * /Home
