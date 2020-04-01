@@ -59,7 +59,7 @@
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        Zmień hasło
+                                        {{ __('Reset Password') }}
                                     </a>
                                 @endif
                             </div>
@@ -70,4 +70,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('script')
+    <script src="{{ asset('js/bodyHeightFix.js') }}"></script>
 @endsection
