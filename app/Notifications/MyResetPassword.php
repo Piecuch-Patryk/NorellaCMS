@@ -16,9 +16,9 @@ class MyResetPassword extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($token)
     {
-        //
+        $this->token = $token;
     }
 
     /**
@@ -43,7 +43,7 @@ class MyResetPassword extends Notification
         return (new MailMessage)
                     ->greeting('Witaj!')
                     ->line('Kliknij link poniżej, aby zresetować hasło.')
-                    ->action('Nowe hasło', url('/') . '/password/reset/' . $token)
+                    ->action('Nowe hasło', route('password.reset', $this->token))
                     ->line('Zignoruj tą wiadomość, jeżeli nie chcesz resetować hasła.');
     }
 
