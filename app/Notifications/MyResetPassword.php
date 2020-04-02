@@ -41,9 +41,10 @@ class MyResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+                    ->greeting('Witaj!')
+                    ->line('Kliknij link poniżej, aby zresetować hasło.')
+                    ->action('Nowe hasło', url('/') . '/password/reset/' . $token)
+                    ->line('Zignoruj tą wiadomość, jeżeli nie chcesz resetować hasła.');
     }
 
     /**
