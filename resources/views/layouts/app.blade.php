@@ -27,6 +27,7 @@
     
     @include('includes.footer')
 
+    @include('includes.socials')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
