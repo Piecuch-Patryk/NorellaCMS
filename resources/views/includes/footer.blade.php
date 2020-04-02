@@ -11,14 +11,14 @@
                 <li><a href="{{ route('product.index') }}" class="d-block px-2 mx-2 my-1 text-light">oferta</a></li>
                 <li><a href="{{ route('product.showprice') }}" class="d-block px-2 mx-2 my-1 text-light">cennik</a></li>
                 <li><a href="{{ route('review.index') }}" class="d-block px-2 mx-2 my-1 text-light">opinie</a></li>
-                <li><a href="#" class="d-block px-2 mx-2 my-1 text-light">galeria</a></li>
-                <li><a href="#" class="d-block px-2 mx-2 my-1 text-light">o nas</a></li>
+                <li><a href="{{ route('gallery.index') }}" class="d-block px-2 mx-2 my-1 text-light">galeria</a></li>
+                <li><a href="{{ route('about.index') }}" class="d-block px-2 mx-2 my-1 text-light">o nas</a></li>
             </ul>
         </div>
 
         <div class="col-12">
             <p class="mb-2">Wszelkie prawa zastrzeżone - Norella</p>
-            <p class="m-0 text-muted small"><a href="#" class="text-muted">Created by Patryk Piecuch</a></p>
+            <p class="m-0 text-muted small"><a href="http://patrykpiecuch.pl" class="text-muted">Created by Patryk Piecuch</a></p>
         </div>
         
     </div>
