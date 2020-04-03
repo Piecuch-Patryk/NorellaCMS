@@ -18,7 +18,7 @@
     <div class="row justify-content-center px-2">
         @foreach ($slides as $slide)
             <div class="col-12 col-md-5 m-3 p-3 border border-pink rounded">
-                <img src="{{ asset('storage/slides/' . $slide->name) }}" class="img-fluid rounded box-shadow" alt="Carousel image">
+                <img src="{{ asset('storage/public/slides/' . $slide->name) }}" class="img-fluid rounded box-shadow" alt="Carousel image">
                 <div class=" text-center mt-3">
                 <form action="{{ route('slide.destroy', ['slide' => $slide]) }}" method="POST">
                         @csrf

@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-pink px-1 box-shadow">
     <a href="{{ route('home.index') }}">
-        <img src="{{ asset('storage/assets/logo/norella.png') }}" class="logo" alt="Norella logo">
+        <img src="{{ asset('storage/public/assets/logo/norella.png') }}" class="logo" alt="Norella logo">
     </a>
     <a href="tel:+48123456789" class="text-light text-underline d-lg-none mr-4">+48 123 456 789</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

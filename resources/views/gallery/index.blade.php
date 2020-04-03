@@ -27,7 +27,7 @@
             <div class="col-11 col-sm-5 col-md-3 col-xl-2 mx-md-3 my-3 p-3 bg-pink rounded box-shadow text-center">
                 <button type="button" class="btn-bg-none border-0" data-toggle="modal" data-target="#modal{{ $i }}">
                     <figure class="figure m-0">
-                        <img src="{{ asset('storage/gallery/' . $images[$i]->name) }}" class="img-fluid rounded" alt="{{ $images[$i]->title }}">
+                        <img src="{{ asset('storage/public/gallery/' . $images[$i]->name) }}" class="img-fluid rounded" alt="{{ $images[$i]->title }}">
                         <figcaption class="figure-caption text-light mt-3">{{ $images[$i]->title }}</figcaption>
                     </figure>
                 </button>
@@ -50,7 +50,7 @@
                             </button>
                         </div>
                         <div class="modal-body text-center">
-                            <img src="{{ asset('storage/gallery/' . $images[$i]->name) }}" class="img-fluid" alt="{{ $images[$i]->title }}">
+                            <img src="{{ asset('storage/public/gallery/' . $images[$i]->name) }}" class="img-fluid" alt="{{ $images[$i]->title }}">
                         </div>
                     </div>
                 </div>

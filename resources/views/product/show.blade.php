@@ -12,7 +12,7 @@
             <h2>{{ $product->title }}</h2>
         </div>
         <div class="col-11 col-md-9 col-lg-5 col-xl-3 text-center mx-auto text-center mb-2">
-            <img src="{{ asset('storage/products/' . $product->image) }}" class="img-fluid rounded box-shadow" alt="{{ $product->title }}">
+            <img src="{{ asset('storage/public/products/' . $product->image) }}" class="img-fluid rounded box-shadow" alt="{{ $product->title }}">
         </div>
         <div class="col-11 col-md-9 col-lg-5 col-xl-3 mx-auto">
             <p>{{ $product->content }}</p>

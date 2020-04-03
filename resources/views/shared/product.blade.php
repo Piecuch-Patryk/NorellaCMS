@@ -2,7 +2,7 @@
     
     @foreach ($products as $product)
     <div class="card m-4 m-lg-5 box-shadow-pink box-shadow-inset-pink" style="width: 18rem;">
-        <img class="card-img-top" src="{{ asset('storage/products/' . $product->image) }}" alt="Zdjęcie produktu">
+        <img class="card-img-top" src="{{ asset('storage/public/products/' . $product->image) }}" alt="Zdjęcie produktu">
 
         <div class="card-body">
             <h5 class="card-title text-center">{{ $product->title }}</h5>

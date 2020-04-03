@@ -19,7 +19,7 @@
                 @method('PUT')
                 <div class="form-group text-center">
                     <div class="my-3">
-                        <img src="{{ asset('storage/products/' . $product->image) }}" id="img" class="img-fluid rounded box-shadow-pink" alt="{{ $product->title }}">
+                        <img src="{{ asset('storage/public/products/' . $product->image) }}" id="img" class="img-fluid rounded box-shadow-pink" alt="{{ $product->title }}">
                     </div>
                     <label for="image" class="btn-sm btn-pink btn-label text-light p-2 rounded">Zmień obrazek</label>
                     <input id="image" name="image" type="file" class="d-none">

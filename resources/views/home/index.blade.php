@@ -9,7 +9,7 @@
             <div class="carousel-inner">
                 @for ($i = 0; $i < count($slides); $i++)
                 <div class="carousel-item {{ $i === 0 ? 'active' : '' }}">
-                    <div class="slider-image" style="background-image: url({{ asset('storage/slides/' . $slides[$i]->name) }})"></div>
+                    <div class="slider-image" style="background-image: url({{ asset('storage/public/slides/' . $slides[$i]->name) }})"></div>
                 </div>
                 @endfor
             </div>
