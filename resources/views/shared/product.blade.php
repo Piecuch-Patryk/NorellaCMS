@@ -1,7 +1,7 @@
 <div class="row d-flex justify-content-center">
     
     @foreach ($products as $product)
-    <div class="card m-4 m-lg-5 box-shadow-pink box-shadow-inset-pink" style="width: 18rem;">
+    <div class="card m-4 m-lg-5 box-shadow-pink box-shadow-pink border-pink" style="width: 18rem;">
         <img class="card-img-top" src="{{ asset('storage/public/products/' . $product->image) }}" alt="Zdjęcie produktu">
 
         <div class="card-body">
