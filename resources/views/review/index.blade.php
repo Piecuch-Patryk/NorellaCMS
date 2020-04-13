@@ -10,6 +10,7 @@
     <div class="row py-4 text-center">
         <div class="col-12">
             <h1 class="mb-0">Opinie naszych klientów</h1>
+            <p>Twoja opinia ma znaczenie, serdecznie zapraszamy do podzielenia się Twoimi spostrzeżeniami.</p>
         </div>
     </div>
 
@@ -21,10 +22,10 @@
 
     <div class="row px-2">
         @foreach ($reviews as $review)
-            <div class="col-12 col-md-7 mx-md-auto border border-pink rounded my-3 p-3">
+            <div class="col-12 col-md-7 mx-md-auto border box-shadow-pink rounded my-3 p-3">
                 <h2 class="mb-3">{{ $review->name }}</h2>
                 <p class="mb-1">{{ $review->content }}</p>
-                <p class="mb-1 small text-muted">{{ $review->created_at->format('Y/m/d') }}</p>
+                <p class="mb-1 small text-muted text-right">{{ $review->created_at->format('Y/m/d') }}</p>
 
                 @auth    
                 <div class="text-right">

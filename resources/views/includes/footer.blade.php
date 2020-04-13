@@ -17,8 +17,8 @@
         </div>
 
         <div class="col-12">
-            <p class="mb-2">Wszelkie prawa zastrzeżone - Norella</p>
-            <p class="m-0 text-muted small"><a href="http://patrykpiecuch.pl" class="text-muted">Created by Patryk Piecuch</a></p>
+            <p class="mb-2">Wszelkie prawa zastrzeżone &commat; Norella</p>
+            <p class="m-0 text-muted small"><a href="https://patrykpiecuch.pl" class="text-muted">Created by Patryk Piecuch</a></p>
         </div>
         
     </div>
