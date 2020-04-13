@@ -122,3 +122,34 @@ body {
   color: #ffffff;
   padding: 1px 45px;
 }
+
+/* Masonry */
+.grid-sizer,
+.grid-item {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+@media (min-width: 576px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(50% - 2rem);
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(25% - 2rem);
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 2500px) {
+  .grid-sizer,
+  .grid-item {
+    width: calc(10% - 3rem);
+    margin: 1.5rem;
+  }
+}
