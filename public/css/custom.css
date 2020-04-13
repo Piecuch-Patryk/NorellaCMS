@@ -131,6 +131,24 @@ body {
   padding: 1px 45px;
 }
 
+/* Cookie consent */
+.cookie-consent {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--pink);
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+  box-shadow: 0 0 1rem 0 #333;
+}
+.js-cookie-consent-agree {
+  background-color: #3b5998;
+  border: none;
+  border-radius: .2rem;
+  color: #fff;
+  margin: 0 1rem;
+}
+
 /* Masonry */
 .grid-sizer,
 .grid-item {

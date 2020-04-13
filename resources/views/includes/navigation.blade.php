@@ -2,7 +2,7 @@
     <a href="{{ route('home.index') }}">
         <img src="{{ asset('storage/assets/logo/norella.png') }}" class="logo" alt="Norella logo">
     </a>
-    <a href="tel:+48123456789" class="text-light text-underline d-lg-none mr-4">+48 123 456 789</a>
+    <a href="tel:+48792888984" class="text-light text-underline d-lg-none mr-4">+48 792 888 984</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
