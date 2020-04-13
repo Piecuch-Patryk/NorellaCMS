@@ -3,7 +3,7 @@
 @section('title', 'Strona główna')
 
 @section('slider')
-<div class="row mb-3 mx-0 carousel-wrap">
+<div class="row mx-0 carousel-wrap">
     <div class="col-12 p-0">
         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
@@ -19,8 +19,11 @@
     {{-- Page title --}}
     <div class="carousel-cover text-center d-flex flex-column align-items-center justify-content-between py-5">
         <div>
-            <h1 class="pt-3">Najlepsze studio urody w Twojej okolicy</h1>
-            <ul class="list-unstyled">
+            <h1 class="pt-3 title-decor">Najlepsze studio urody w Twojej okolicy</h1>
+            <p class="d-none d-md-block my-0 mx-sm-5 px-sm-5 py-5 header-subtitle">
+                Studio urody NORELLA to wyjątkowe miejsce w którym zadbamy o twój idealny wygląd. Przytulne, nastrojowe wnętrze i delikatna muzyka pozwolą Ci się wyciszyć, odpocząć od codziennego intensywnego tempa i skupić na swoich potrzebach. Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.
+            </p>
+            <ul class="list-unstyled py-3">
                 <li>
                     <span class="d-block">Zapraszamy</span>
                     <span class="d-block">Pn-Pt 10:00 - 18:00</span>
@@ -28,9 +31,8 @@
                 </li>
                 <li>Jana Matejki 9, 47-220 Kędzierzyn-Koźle</li>
             </ul>
-            <p class="d-none d-sm-block h-5 my-0 mx-sm-5 px-sm-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ad atque earum repudiandae culpa suscipit? Minima consequuntur explicabo modi a quas tenetur repudiandae, similique sunt totam.</p>
         </div>
-        <a href="tel:+4832321221" class="btn-lg btn-pink text-light box-shadow">Umów się na wizytę</a>
+        <a href="tel:+4832321221" class="btn-lg btn-pink text-light box-shadow d-md-none">Umów się na wizytę</a>
     </div>
 </div>
 @endsection

@@ -50,6 +50,11 @@ body {
   border-bottom: 2px solid pink;
 }
 
+/* Home page */
+.header-subtitle {
+  font-size: 1.1em;
+}
+
 /* Logo */
 
 .logo {
@@ -66,7 +71,7 @@ body {
   left: 0;
   width: 100%;
   height: 101%;
-  background: linear-gradient(rgba(255, 255, 255, .6) 80%, rgba(248, 249, 250, 1) 85%);
+  background: linear-gradient(rgba(255, 255, 255, .6) 90%, rgba(248, 249, 250, 1) 95%);
   z-index: 10;
 }
 .slider-image {
@@ -121,6 +126,24 @@ body {
 .socials-box a {
   color: #ffffff;
   padding: 1px 45px;
+}
+
+/* Cookie consent */
+.cookie-consent {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--pink);
+  text-align: center;
+  padding: 1rem 0;
+  color: #fff;
+  box-shadow: 0 0 1rem 0 #333;
+}
+.js-cookie-consent-agree {
+  background-color: #3b5998;
+  border: none;
+  border-radius: .2rem;
+  color: #fff;
+  margin: 0 1rem;
 }
 
 /* Masonry */

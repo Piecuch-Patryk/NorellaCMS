@@ -11,7 +11,7 @@
     <div class="row pt-4">
         <div class="col-12 col-md-10 mx-md-auto text-center">
             <h1>Zabiegi kosmetyczne Norella</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex, in veritatis esse at iusto mollitia voluptas fugiat rem.</p>
+            <p>Dbamy o to, by klientki mogły u nas odpocząć od trosk dnia codziennego i poczuć, że czas spędzony w salonie jest tylko im poświęcony.</p>
         </div>
     </div>
 
