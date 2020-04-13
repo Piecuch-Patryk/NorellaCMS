@@ -21,15 +21,14 @@
         </div>
     </div>
     @endauth
+    
 
-    <div class="row d-flex justify-content-center justify-content-sm-around">
+    <div class="grid">
+        <div class="grid-sizer"></div>
         @for ($i = 0; $i < count($images); $i++)
-            <div class="col-11 col-sm-5 col-md-3 col-xl-2 mx-md-3 my-3 p-3 bg-pink rounded box-shadow text-center">
+            <div class="grid-item">
                 <button type="button" class="btn-bg-none border-0" data-toggle="modal" data-target="#modal{{ $i }}">
-                    <figure class="figure m-0">
-                        <img src="{{ asset('storage/public/gallery/' . $images[$i]->name) }}" class="img-fluid rounded" alt="{{ $images[$i]->title }}">
-                        <figcaption class="figure-caption text-light mt-3">{{ $images[$i]->title }}</figcaption>
-                    </figure>
+                    <img src="{{ asset('storage/gallery/' . $images[$i]->name) }}" class="img-fluid box-shadow-pink" alt="{{ $images[$i]->title }}">
                 </button>
                 @auth
                 <form action="{{ route('gallery.destroy', ['image' => $images[$i]]) }}" method="POST">
@@ -42,16 +41,8 @@
             {{-- Modal --}}
             <div class="modal fade" id="modal{{ $i }}" tabindex="-1" role="dialog" aria-labelledby="modalTitle{{ $i }}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-                    <div class="modal-content bg-pink">
-                        <div class="modal-header">
-                            <h5 class="modal-title ml-md-1" id="modalTitle{{ $i }}">{{ $images[$i]->title }}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <img src="{{ asset('storage/public/gallery/' . $images[$i]->name) }}" class="img-fluid" alt="{{ $images[$i]->title }}">
-                        </div>
+                    <div class="modal-content">
+                        <img src="{{ asset('storage/gallery/' . $images[$i]->name) }}" class="img-fluid" alt="Zdjęcie w galerii zdjęć.">
                     </div>
                 </div>
             </div>
@@ -59,4 +50,9 @@
     </div>
 
 </main>
+@endsection
+
+@section('script')
+<script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
+<script src="{{ asset('js/masonry-init.js') }}"></script>
 @endsection
