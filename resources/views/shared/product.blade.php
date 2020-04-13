@@ -2,7 +2,7 @@
     <div class="grid-sizer"></div>
     @foreach ($products as $product)
     <div class="grid-item">
-        <div class="card box-shadow-pink box-shadow-inset-pink">
+        <div class="card box-shadow-pink">
             <img class="card-img-top" src="{{ asset('storage/products/' . $product->image) }}" alt="Zdjęcie produktu">
     
             <div class="card-body">

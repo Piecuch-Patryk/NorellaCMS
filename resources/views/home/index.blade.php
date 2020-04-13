@@ -47,7 +47,7 @@
 
     {{-- Products --}}
     @include('shared.product')
-    <div class="row text-center pb-3">
+    <div class="row text-center py-3">
         <div class="col-12">
             <a href="{{ route('product.index') }}" class="btn btn-outline-info px-4">Więcej</a>
         </div>
