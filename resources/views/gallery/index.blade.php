@@ -51,8 +51,3 @@
 
 </main>
 @endsection
-
-@section('script')
-<script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
-<script src="{{ asset('js/masonry-init.js') }}"></script>
-@endsection
