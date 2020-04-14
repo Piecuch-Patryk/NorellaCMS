@@ -1,5 +1,5 @@
 # Norella - beauty studio
-Mobile-first, fully responsive CMS system build to increase number of customers. They have been using facebook for online marketing so I thought it might be a good idea to create portfolio site but with dynamic content. After they are logged in, they can add/edit/delete (CRUD) products and photos. Image/Intervention scales uploaded image to three diffrent sizes to be able to optimize page loading. Server detects which image size to provide.
+Mobile-first, fully responsive CMS system build to increase number of customers. They have been using facebook for online marketing so I thought it might be a good idea to create portfolio site but with dynamic content. After they are logged in, they can add/edit/delete (CRUD) products and photos. Image/Intervention scales uploaded image to three diffrent sizes to be able to optimize page loading. Server detects which image size to provide. https://norella.pl
 ## Build With
 * [Laravel](https://laravel.com/) - MVC web application framework
 * [Intervention](http://image.intervention.io/) - PHP image handling and manipulation library
