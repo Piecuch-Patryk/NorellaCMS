@@ -121,7 +121,7 @@ body {
   font-size: 1.5em;
   line-height: 1.5em;
   box-shadow: 0 0 3px 0 #333;
-  z-index: 1500;
+  z-index: 99;
 }
 .socials-box a {
   color: #ffffff;
@@ -147,34 +147,30 @@ body {
 }
 
 /* Masonry */
-.grid-sizer,
-.grid-item {
+.grid {
   width: 100%;
-  margin: 1rem 0;
-  padding: 0 .5rem;
+}
+.grid-item {
+  margin: 20px 0;
 }
 
 @media (min-width: 576px) {
-  .grid-sizer,
-  .grid-item {
-    width: calc(50% - 2rem);
-    margin: 1rem;
-    padding: 0;
+  .grid {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .grid-sizer {
+    width: 300px;
   }
 }
 
 @media (min-width: 992px) {
-  .grid-sizer,
-  .grid-item {
-    width: calc(25% - 2rem);
-    margin: 1rem;
+  .grid {
+    width: 1000px;
   }
-}
-
-@media (min-width: 2500px) {
   .grid-sizer,
   .grid-item {
-    width: calc(10% - 3rem);
-    margin: 1.5rem;
+    width: 400px;
+    margin: 20px 50px;
   }
 }

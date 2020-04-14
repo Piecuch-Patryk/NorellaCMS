@@ -37,5 +37,4 @@
 
 @section('script')
 <script src="{{ asset('js/loadImageForm.js') }}"></script>    
-<script src="{{ asset('js/bodyHeightFix.js') }}"></script>    
 @endsection

@@ -71,7 +71,3 @@
     </div>
 </div>
 @endsection
-
-@section('script')
-    <script src="{{ asset('js/bodyHeightFix.js') }}"></script>
-@endsection

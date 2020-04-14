@@ -1,7 +1,7 @@
-$('#container').imagesLoaded( {
+$('.grid').imagesLoaded( {
     itemSelector: '.grid-item',
     columnWidth: '.grid-sizer',
-    percentPosition: true
+    fitwidth: true,
   },
   function() {
     $('.grid').masonry();
