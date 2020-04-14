@@ -24,7 +24,6 @@
     
 
     <div class="grid">
-        <div class="grid-sizer"></div>
         @for ($i = 0; $i < count($images); $i++)
             <div class="grid-item">
                 <button type="button" class="btn-bg-none border-0" data-toggle="modal" data-target="#modal{{ $i }}">
