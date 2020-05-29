@@ -7,10 +7,61 @@
   color: var(--primary-color);
 }
 
+/* BG */
+.bg-pink {
+  background-color: var(--primary-color);
+}
+
 /* BTN */
 .btn-light {
   background-color: #fff;
   color: var(--primary-color);
+}
+
+/* Navigation */
+.main--nav {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 85%;
+  z-index: 2;
+}
+.main--nav::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 120%;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+.main--nav.nav--fixed::before {
+  border-radius: 0;
+}
+.main--nav.nav--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .5em !important;
+  transition: all .3s ease-in-out;
+}
+.logo {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 120px;
+  transition: all .3s ease-in-out;
+}
+.main--nav.nav--fixed .logo {
+  top: 10px;
+  left: .5em;
+  width: 60px;
 }
 
 /* Home page */
@@ -49,11 +100,6 @@
   font-style: italic;
   font-size: .7rem;
   z-index: 2;
-}
-/* Logo */
-
-.logo {
-  width: 70px;
 }
 
 /* Carousel */

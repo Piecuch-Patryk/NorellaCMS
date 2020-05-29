@@ -110,3 +110,10 @@
 
 </main>
 @endsection
+
+
+@section('script')
+<script src="{{ asset('js/navigation.js') }}">
+    
+</script>
+@endsection

@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    {{-- @include('includes.navigation') --}}
+    @include('includes.navigation')
     @include('includes.header')
 
     @yield('content')
