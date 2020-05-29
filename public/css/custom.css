@@ -1,63 +1,55 @@
+:root {
+  --primary-color: #F66D9B;
+}
 
-body {
-    min-width: 270px;
-    min-height: 100vh;
+/* TEXT */
+.text-pink {
+  color: var(--primary-color);
 }
-.bg-pink {
-  background-color: var(--pink);
-}
-.bg-transparent-pink {
-  background-color: rgba(246, 109, 155, .5);
-}
-.border-pink {
-  border-color: var(--pink) !important;
-}
-.btn-pink {
-  background-color: #f66d9b;
-}
-.btn-pink:hover {
-  background-color: #d55c8a;
-}
-.btn-bg-none {
-  background: none;
-}
-.btn-label {
-  cursor: pointer;
-}
-.box-shadow {
-  box-shadow: 0 0 10px 0 rgb(88, 88, 88);
-}
-.btn-shadow-light {
-  box-shadow: 0 0 5px 0 rgb(241, 241, 241);
-}
-.box-shadow-pink {
-  box-shadow: 0 0 10px 0 var(--pink);
-}
-.box-shadow-inset-pink {
-  box-shadow: inset 0 0 10px 0 var(--pink);
-}
-.text-underline {
-  text-decoration: underline;
-}
-.title-decor {
-  position: relative;
-  display: inline-block;
-}
-.title-decor::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%;
-  border-bottom: 2px solid pink;
+
+/* BTN */
+.btn-light {
+  background-color: #fff;
+  color: var(--primary-color);
 }
 
 /* Home page */
-.header-subtitle {
-  font-size: 1.1em;
+.header--home {
+  min-height: 70vh;
+  background-image: url("../storage/assets/home-page/header-bg.jpg");
+  background-size: cover;
+  background-position: 50% 0;
+  letter-spacing: 1px;
+  overflow: hidden;
+  z-index: 1;
 }
-
+.header--home::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  left: -10%;
+  width: 200%;
+  height: 125px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.bg--color {
+  position: absolute;
+  top: -20%;
+  left: -60%;
+  height: 140%;
+  width: 160%;
+  background: radial-gradient(circle, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 55%, rgba(246,109,155,1) 100%);
+  opacity: .7;
+}
+.header--sentence {
+  bottom: 0;
+  right: 10px;
+  font-style: italic;
+  font-size: .7rem;
+  z-index: 2;
+}
 /* Logo */
 
 .logo {
