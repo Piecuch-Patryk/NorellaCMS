@@ -49,7 +49,7 @@
   left: 0;
   width: 100%;
   padding: .5em !important;
-  transition: all .3s ease-in-out;
+  transition: width .3s ease-in-out;
 }
 .logo {
   position: absolute;
