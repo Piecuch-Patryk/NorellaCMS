@@ -124,13 +124,16 @@
         </div>
     </div>
 
-
-    <div class="bottom--btn">
-            <a href="{{ route('product.index') }}" class="btn btn-pink px-4 ml-5">Więcej</a>
+    <div class="row">
+        <div class="col-12 px-0">
+            <div class="bottom--btn pb-5">
+                <a href="{{ route('product.index') }}" class="btn btn-pink px-4 ml-5">Więcej</a>
+            </div>
+        </div>
     </div>
 
     {{-- Slider reviews --}}
-    <div class="comments--section row position-relative py-5 my-5">
+    <div class="comments--section row position-relative py-5 mb-5">
         <div class="col-12 mb-5 text-center">
             <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Opinie Naszych Klientów</h2>
         </div>
@@ -159,7 +162,7 @@
             </div>
         </div>
         <div class="col-12 text-center">
-            <a href="{{ route('review.index') }}" class="btn btn-pink mt-3 px-4">Pokaż Wszystkie</a>
+            <a href="{{ route('review.index') }}" class="btn btn-sm btn-pink mt-5">Pokaż Wszystkie</a>
         </div>
     </div>
 
