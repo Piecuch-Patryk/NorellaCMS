@@ -47,7 +47,7 @@
     </div>
 
     {{-- category - 1 --}}
-    <div class="row category--wrap category--1 py-5 mt-3 bg-light">
+    <div class="row category--wrap category--1 py-5 mt-3">
         <div class="col-12 text-center">
             <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Zabiegi kosmetyczne na twarz</h3>
             <ul class="p-0 py-5">
@@ -133,7 +133,7 @@
     </div>
 
     {{-- Slider reviews --}}
-    <div class="comments--section row position-relative py-5 mb-5">
+    <div class="comments--section row position-relative overflow--x--hidden py-5 mb-5">
         <div class="col-12 mb-5 text-center">
             <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Opinie Naszych Klientów</h2>
         </div>
