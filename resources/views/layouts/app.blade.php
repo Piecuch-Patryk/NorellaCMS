@@ -27,15 +27,15 @@
     
     @include('includes.footer')
 
-    @include('includes.socials')
+    {{-- @include('includes.socials') --}}
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     {{-- <script src="{{ asset('js/navSpaceFix.js') }}"></script> --}}
     {{-- <script src="{{ asset('js/bodyHeightFix.js') }}"></script> --}}
-    <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('js/masonry.pkgd.min.js') }}"></script>
-    <script src="{{ asset('js/masonry-init.js') }}"></script>
+    {{-- <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('js/masonry.pkgd.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('js/masonry-init.js') }}"></script> --}}
     @yield('script', '')
 </body>
 </html>

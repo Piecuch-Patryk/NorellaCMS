@@ -19,54 +19,33 @@
     </header>
 @endsection
 
+{{-- Main --}}
+@section('content')
+<main class="main--content container-fluid mx-0 position-relative">
 
-
-@section('slider')
-<div class="row mx-0 carousel-wrap">
-    <div class="col-12 p-0">
-        <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
-            <div class="carousel-inner">
-                @for ($i = 0; $i < count($slides); $i++)
-                <div class="carousel-item {{ $i === 0 ? 'active' : '' }}">
-                    <div class="slider-image" style="background-image: url({{ asset('storage/slides/' . $slides[$i]->name) }})"></div>
-                </div>
-                @endfor
+    {{-- Logos --}}
+    <aside>
+        <div class="row bg-pink text-center text-light">
+            <div class="col-12 px-0">
+                <h2 class="h5 position-relative py-4 mb-0">Korzystamy z najlepszych kosmetyków na rynku</h2>
             </div>
         </div>
-    </div>
-
-    {{-- Page title --}}
-    <div class="carousel-cover text-center d-flex flex-column align-items-center justify-content-between py-5">
-        <div>
-            <h1 class="pt-3 title-decor">Najlepsze studio urody w Twojej okolicy</h1>
-            <p class="d-none d-md-block my-0 mx-sm-5 px-sm-5 py-5 header-subtitle">
-                Studio urody NORELLA to wyjątkowe miejsce w którym zadbamy o twój idealny wygląd. Przytulne, nastrojowe wnętrze i delikatna muzyka pozwolą Ci się wyciszyć, odpocząć od codziennego intensywnego tempa i skupić na swoich potrzebach. Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.
-            </p>
-            <ul class="list-unstyled py-3">
-                <li>
-                    <span class="d-block">Zapraszamy</span>
-                    <span class="d-block">Pn-Pt 10:00 - 18:00</span>
-                    <span class="d-block">Sobota 10:00 - 13:00</span>
-                </li>
-                <li>Jana Matejki 9, 47-220 Kędzierzyn-Koźle</li>
-            </ul>
-        </div>
-        <a href="tel:+4832321221" class="btn-lg btn-pink text-light box-shadow d-md-none">Umów się na wizytę</a>
-    </div>
-</div>
-@endsection
-
-
-@section('content')
-<main class="container-fluid">
-
-    <div class="row text-center py-3">
-        <div class="col-12">
-            <h2 class="title-decor">Norella poleca</h2>
-        </div>
-    </div>
+        <div class="row">
+        <ul class="d-flex justify-content-center align-items-center w-100 p-0 pt-5 pb-3 m-0">
+            <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/depilax.png') }}" class="w-100" alt="Depilax logo"></li>
+            <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/farmona.jpg') }}" class="w-100" alt="Farmona logo"></li>
+            <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/mollon.jpg') }}" class="w-100" alt="Mollon pro logo"></li>
+            <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/norel.png') }}" class="w-100" alt="Norel - dr Wilsz logo"></li>
+        </ul>
+    </aside>
 
     {{-- Products --}}
+    <div class="row overflow--x--hidden">
+        <div class="col-12 text-center">
+            <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Norella Poleca</h2>
+        </div>
+    </div>
+    
     @include('shared.product')
     <div class="row text-center py-3">
         <div class="col-12">
