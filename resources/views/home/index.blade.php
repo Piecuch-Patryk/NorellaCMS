@@ -126,8 +126,13 @@
 
     <div class="row">
         <div class="col-12 px-0">
-            <div class="bottom--btn pb-5">
-                <a href="{{ route('product.index') }}" class="btn btn-pink px-4 ml-5">Więcej</a>
+            <div class="bottom--btn pb-3">
+                <div>
+                    <a href="{{ route('product.index') }}" class="btn btn-sm btn-outline-pink px-4 ml-5 mb-3">Więcej</a>
+                </div>
+                <div class="d-sm-none">
+                    <a href="tel:+48948338229" class="btn btn-sm btn-pink ml-5">Umów się na wizytę</a>
+                </div>
             </div>
         </div>
     </div>

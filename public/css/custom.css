@@ -26,6 +26,10 @@ ul {
   background-color: var(--primary-color);
   color: #fff;
 }
+.btn-outline-pink {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
 
 /* ROW */
 .row.overflow--x--hidden {
