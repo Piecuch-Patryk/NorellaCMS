@@ -47,7 +47,7 @@
     </div>
 
     {{-- category - 1 --}}
-    <div class="row category--wrap category--1 py-5 my-3">
+    <div class="row category--wrap category--1 py-5 mt-3 bg-light">
         <div class="col-12 text-center">
             <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Zabiegi kosmetyczne na twarz</h3>
             <ul class="p-0 py-5">
@@ -125,16 +125,14 @@
     </div>
 
 
-    <div class="row text-center position-relative bg--cover">
-        <div class="col-12">
-            <a href="{{ route('product.index') }}" class="btn btn-pink px-4">Więcej</a>
-        </div>
+    <div class="bottom--btn">
+            <a href="{{ route('product.index') }}" class="btn btn-pink px-4 ml-5">Więcej</a>
     </div>
 
     {{-- Slider reviews --}}
-    <div class="row my-5">
-        <div class="col-12 mb-3 text-center">
-            <h2 class="title-decor">Opinie naszych klientów</h2>
+    <div class="comments--section row position-relative py-5 my-5">
+        <div class="col-12 mb-5 text-center">
+            <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Opinie Naszych Klientów</h2>
         </div>
         <div class="col-12 p-0">
             <div id="carousel_reviews" class="carousel slide" data-ride="carousel">
@@ -161,7 +159,7 @@
             </div>
         </div>
         <div class="col-12 text-center">
-            <a href="{{ route('review.index') }}" class="btn btn-outline-info mt-3 px-4">Pokaż wszystkie</a>
+            <a href="{{ route('review.index') }}" class="btn btn-pink mt-3 px-4">Pokaż Wszystkie</a>
         </div>
     </div>
 
