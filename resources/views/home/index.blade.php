@@ -4,12 +4,11 @@
 
 {{-- Header --}}
 @section('header')
-    <header class="header--home container-fluid position-sticky sticky-top d-flex flex-column justify-content-center text-light">
+    <header class="header--home text-center container-fluid position-sticky sticky-top d-flex flex-column justify-content-center text-light">
         <div class="bg--color"></div>
         <div class="row">
             <div class="col-12 px-3">
-                <h1 class="mb-0 text-pink">Norella</h1>
-                <h2 class="h4 mb-4">Twoje Studio Urody</h2>
+                <h1 class="h3 mb-4">Twoje Studio Urody</h1>
                 <p class="mb-4">Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.</p>
                 <a href="{{ route('product.index') }}" class="btn btn-light">Nasza Oferta</a>
             </div>
