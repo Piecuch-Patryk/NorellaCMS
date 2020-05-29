@@ -21,6 +21,10 @@ ul {
   background-color: #fff;
   color: var(--primary-color);
 }
+.btn-pink {
+  background-color: var(--primary-color);
+  color: #fff;
+}
 
 /* ROW */
 .row.overflow--x--hidden {
@@ -136,12 +140,16 @@ ul {
   right: -100%;
 }
 .category--wrap {
+  z-index: 3;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .category--1 {
   background-image: url("../storage/assets/home-page/bg-recomended-1.png");
+}
+.category--2 {
+  background-image: url("../storage/assets/home-page/bg-recomended-2.png");
 }
 .list--decor::before {
   content: '';
@@ -152,7 +160,18 @@ ul {
   width: 2px;
   background-color: var(--primary-color);
 }
-
+.sticky--section {
+  z-index: 1;
+}
+.main--sentence {
+  font-size: 1.5rem;
+}
+.bg--cover {
+  padding-top: 8rem;
+  background-color: #fff;
+  transform: translateY(-7rem);
+  z-index: 2;
+}
 
 /* Table */
 .table thead th,

@@ -45,11 +45,89 @@
             <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Norella Poleca</h2>
         </div>
     </div>
-    
-    @include('shared.product')
-    <div class="row text-center py-3">
+
+    {{-- category - 1 --}}
+    <div class="row category--wrap category--1 py-5 my-3">
+        <div class="col-12 text-center">
+            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Zabiegi kosmetyczne na twarz</h3>
+            <ul class="p-0 py-5">
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5 my-0">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row sticky--section sticky-top">
+        <div class="col-12 text-center py-5 px-2">
+            <p class="m-0 main--sentence">Dbamy o to, by klientki mogły u nas odpocząć od trosk dnia codziennego i poczuć, że czas spędzony w salonie jest tylko im poświęcony.</p>
+        </div>
+    </div>
+
+    {{-- category - 2 --}}
+    <div class="row position-relative category--wrap category--2 py-5">
+        <div class="col-12 text-center">
+            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Pielęgnacja dłoni i stóp</h3>
+            <ul class="p-0 py-5">
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5 my-0">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="row text-center position-relative bg--cover">
         <div class="col-12">
-            <a href="{{ route('product.index') }}" class="btn btn-outline-info px-4">Więcej</a>
+            <a href="{{ route('product.index') }}" class="btn btn-pink px-4">Więcej</a>
         </div>
     </div>
 
