@@ -1,13 +1,13 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-pink px-1 box-shadow">
+<nav class="main--nav navbar navbar-expand-lg navbar-dark p-0 px-1">
     <a href="{{ route('home.index') }}">
         <img src="{{ asset('storage/assets/logo/norella.png') }}" class="logo" alt="Norella logo">
     </a>
-    <a href="tel:+48792888984" class="text-light text-underline d-lg-none mr-4">+48 792 888 984</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    {{-- <a href="tel:+48792888984" class="text-light text-underline d-lg-none mr-4">+48 792 888 984</a> --}}
+    <button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav text-center d-md-flex justify-content-center w-100 pt-xs-4">
+        <ul class="navbar-nav text-center d-md-flex justify-content-center w-100 pt-xs-5 pt-5">
             <li class="nav-item {{ Route::is('home.index') ? 'active' : '' }}">
                 <a class="nav-link mx-md-3" href="{{ route('home.index') }}">Strona Główna</a>
             </li>
