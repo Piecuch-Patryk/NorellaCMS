@@ -138,7 +138,7 @@
     </div>
 
     {{-- Slider reviews --}}
-    <div class="comments--section row position-relative overflow--x--hidden py-5 mb-5">
+    <div class="comments--section row position-relative overflow--x--hidden py-5">
         <div class="col-12 mb-5 text-center">
             <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Opinie Naszych Klientów</h2>
         </div>

@@ -99,7 +99,7 @@ ul {
   transform: translateY(50%);
   left: -10%;
   width: 200%;
-  height: 125px;
+  height: 115px;
   border-radius: 50%;
   background-color: var(--primary-color);
 }
@@ -189,6 +189,32 @@ ul {
 .comments--section {
   background-color: #fff;
   z-index: 3;
+}
+
+/* Footer */
+.footer {
+  z-index: 3;
+  overflow: hidden;
+}
+.footer--bg {
+  background-image: url("../storage/assets/shared/footer-bg.png");
+  background-position: 50% 0;
+  background-size: 115%;
+  background-repeat: no-repeat;
+}
+.water--mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 300px;
+  transform: rotate(35deg) translate3d(-15%, 30%, 0);
+  opacity: .08;
+  background-image: url("../storage/assets/logo/norella.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 /* Table */
