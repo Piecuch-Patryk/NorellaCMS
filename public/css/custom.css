@@ -191,6 +191,7 @@ ul {
   background-position: 50% 0;
   background-size: 115%;
   background-repeat: no-repeat;
+  z-index: 3;
 }
 .water--mark {
   position: absolute;

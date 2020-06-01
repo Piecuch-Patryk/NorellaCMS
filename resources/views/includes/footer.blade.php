@@ -1,5 +1,5 @@
 <footer class="footer container-fluid position-relative text-center bg-white">
-    <div class="row footer--bg py-5">
+    <div class="row position-relative footer--bg py-5">
         <div class="col-4 text-center py-3">
             <h6 class="h5 text-dark">Nawigacja</h6>
             <ul class="list-unstyled h-75 m-0 d-flex flex-column justify-content-around">
@@ -30,6 +30,8 @@
                 <p class="m-0">47-220</p>
             </div>
         </div>
+        
+        <div class="water--mark"></div>
     </div>
 
     <div class="row py-5">
@@ -44,6 +46,4 @@
             <p class="m-0 text-muted small"><a href="https://patrykpiecuch.pl" class="text-muted">Created by Patryk Piecuch</a></p>
         </div>
     </div>
-
-    <div class="water--mark"></div>
 </footer>
