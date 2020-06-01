@@ -14,7 +14,7 @@
             </div>
             <div class="position-absolute header--sentence m-0 pb-3">
                 <p class="m-0">Pozwól sobie na chwilę relaksu.</p>
-                <a href="tel:+48239234854" class="btn btn-sm btn-outline-light d-block w-75 m-auto">Umów wizytę</a>
+                <a href="tel:+48239234854" class="text-white">Umów wizytę</a>
             </div>
         </div>
     </header>

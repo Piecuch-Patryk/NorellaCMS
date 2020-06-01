@@ -130,6 +130,9 @@ ul {
   font-style: italic;
   font-size: .8rem;
 }
+.header--sentence a {
+  text-decoration: underline;
+}
 
 /* Main content */
 .main--content {
