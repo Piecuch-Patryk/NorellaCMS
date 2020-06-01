@@ -1,5 +1,5 @@
-<footer class="footer container-fluid position-relative text-center bg-white footer--bg pt-5">
-    <div class="row">
+<footer class="footer container-fluid position-relative text-center bg-white">
+    <div class="row footer--bg py-5">
         <div class="col-4 text-center py-3">
             <h6 class="h5 text-dark">Nawigacja</h6>
             <ul class="list-unstyled h-75 m-0 d-flex flex-column justify-content-around">
@@ -30,9 +30,11 @@
                 <p class="m-0">47-220</p>
             </div>
         </div>
+    </div>
 
-        <div class="col-12 py-3">
-            <h6 class="h4 text-white">Do zobaczenia w salonie!</h6>
+    <div class="row py-5">
+        <div class="col-12">
+            <h6 class="h4 text-pink">Do zobaczenia w salonie!</h6>
         </div>
     </div>
 
