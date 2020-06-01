@@ -22,13 +22,34 @@ ul {
   background-color: #fff;
   color: var(--primary-color);
 }
+.btn-light:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+.btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-outline-light:hover {
+  color: var(--primary-color);
+}
 .btn-pink {
   background-color: var(--primary-color);
   color: #fff;
 }
+.btn-pink:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
 .btn-outline-pink {
   border-color: var(--primary-color);
   color: var(--primary-color);
+}
+.btn-outline-pink:hover {
+  color: #fff;
+  background-color: var(--primary-color);
 }
 
 /* ROW */

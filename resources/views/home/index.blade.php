@@ -14,7 +14,7 @@
             </div>
             <div class="position-absolute header--sentence m-0 pb-3">
                 <p class="m-0">Pozwól sobie na chwilę relaksu.</p>
-                <a href="tel:+48239234854" class="btn btn-sm btn-outline-pink d-block w-75 m-auto">Umów wizytę</a>
+                <a href="tel:+48239234854" class="btn btn-sm btn-outline-light d-block w-75 m-auto">Umów wizytę</a>
             </div>
         </div>
     </header>
@@ -26,7 +26,7 @@
 
     {{-- Logos --}}
     <aside class="row">
-        <ul class="d-flex justify-content-center align-items-center w-100 p-0 pb-3 m-0">
+        <ul class="d-flex justify-content-center align-items-center w-100 p-0 py-5 m-0">
             <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/depilax.png') }}" class="w-100" alt="Depilax logo"></li>
             <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/farmona.jpg') }}" class="w-100" alt="Farmona logo"></li>
             <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/mollon.jpg') }}" class="w-100" alt="Mollon pro logo"></li>
