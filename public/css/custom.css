@@ -148,20 +148,21 @@ ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
+  width: 400%;
   height: 1px;
   background-color: var(--primary-color);
 }
 .title--decor::before {
-  left: -100%;
+  left: -400%;
 }
 .title--decor::after {
-  right: -100%;
+  right: -400%;
 }
 .category--wrap {
   z-index: 3;
   background-size: cover;
   background-position: center;
+
   background-repeat: no-repeat;
 }
 .category--1 {
@@ -213,7 +214,7 @@ ul {
 .footer--bg {
   background-image: url("../storage/assets/shared/footer-bg.png");
   background-position: 50% 0;
-  background-size: 115% 100%;
+  background-size: 150% 100%;
   background-repeat: no-repeat;
   z-index: 3;
 }
@@ -279,31 +280,13 @@ ul {
   margin: 0 1rem;
 }
 
-/* Masonry */
-.grid {
-  width: 100%;
-}
-.grid-item {
-  margin: 20px 0;
-}
 
 @media (min-width: 576px) {
-  .grid {
-    width: 500px;
-    margin: 0 auto;
-  }
-  .grid-sizer {
-    width: 300px;
+  .flex--list--item {
+    width: 100px;
   }
 }
 
 @media (min-width: 992px) {
-  .grid {
-    width: 1000px;
-  }
-  .grid-sizer,
-  .grid-item {
-    width: 400px;
-    margin: 20px 50px;
-  }
+  
 }

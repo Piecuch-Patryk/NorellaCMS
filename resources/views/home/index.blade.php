@@ -4,17 +4,17 @@
 
 {{-- Header --}}
 @section('header')
-    <header class="header--home text-center container-fluid position-sticky sticky-top d-flex flex-column justify-content-center text-light">
+    <header class="header--home text-center container-fluid position-sticky sticky-top d-flex flex-column justify-content-center text-light px-sm-5">
         <div class="bg--color"></div>
         <div class="row">
-            <div class="col-12 px-3">
-                <h1 class="h3 mb-4">Twoje Studio Urody</h1>
-                <p class="mb-4">Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.</p>
+            <div class="col-12 px-3 text-md-left mt-md-5">
+                <h1 class="h3 mb-4 mb-md-5">Twoje Studio Urody</h1>
+                <p class="mb-4 mb-md-5">Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.</p>
                 <a href="{{ route('product.index') }}" class="btn btn-light">Nasza Oferta</a>
             </div>
             <div class="position-absolute header--sentence m-0 pb-3">
                 <p class="m-0">Pozwól sobie na chwilę relaksu.</p>
-                <a href="tel:+48239234854" class="text-white">Umów wizytę</a>
+                <a href="tel:+48239234854" class="text-white d-md-none">Umów wizytę</a>
             </div>
         </div>
     </header>
@@ -36,14 +36,14 @@
 
     {{-- Products --}}
     <div class="row overflow--x--hidden">
-        <div class="col-12 text-center">
+        <div class="col-12 text-center text-md-left">
             <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Norella Poleca</h2>
         </div>
     </div>
 
     {{-- category - 1 --}}
     <div class="row category--wrap category--1 py-5 mt-3">
-        <div class="col-12 text-center">
+        <div class="col-12 col-md-7 mx-md-auto text-center">
             <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Zabiegi kosmetyczne na twarz</h3>
             <ul class="p-0 py-5">
                 <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
@@ -78,14 +78,14 @@
     </div>
 
     <div class="row sticky--section sticky-top">
-        <div class="col-12 text-center py-5 px-2">
+        <div class="col-12 col-md-7 mx-md-auto text-center py-5 px-2">
             <p class="m-0 main--sentence">Dbamy o to, by klientki mogły u nas odpocząć od trosk dnia codziennego i poczuć, że czas spędzony w salonie jest tylko im poświęcony.</p>
         </div>
     </div>
 
     {{-- category - 2 --}}
     <div class="row position-relative category--wrap category--2 py-5">
-        <div class="col-12 text-center">
+        <div class="col-12 col-md-7 mx-md-auto text-center">
             <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Pielęgnacja dłoni i stóp</h3>
             <ul class="p-0 py-5">
                 <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
@@ -121,7 +121,7 @@
 
     <div class="row">
         <div class="col-12 px-0">
-            <div class="bottom--btn pb-3">
+            <div class="bottom--btn pb-3 text-md-center">
                 <div>
                     <a href="{{ route('product.index') }}" class="btn btn-sm btn-outline-pink px-4 ml-5 mb-3">Więcej</a>
                 </div>
