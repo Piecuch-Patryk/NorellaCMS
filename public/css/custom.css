@@ -92,17 +92,6 @@ ul {
   overflow: hidden;
   z-index: 1;
 }
-.header--home::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  transform: translateY(50%);
-  left: -10%;
-  width: 200%;
-  height: 115px;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-}
 .bg--color {
   position: absolute;
   top: -20%;
@@ -113,11 +102,12 @@ ul {
   opacity: .7;
 }
 .header--sentence {
-  bottom: 10px;
-  right: 10px;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding-top: 1rem;
   font-style: italic;
-  font-size: .5rem;
-  z-index: 2;
+  font-size: .8rem;
 }
 
 /* Main content */

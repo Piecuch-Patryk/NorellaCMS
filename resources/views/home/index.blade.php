@@ -12,8 +12,9 @@
                 <p class="mb-4">Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.</p>
                 <a href="{{ route('product.index') }}" class="btn btn-light">Nasza Oferta</a>
             </div>
-            <div class="position-absolute header--sentence">
-                <p>Pozwól sobie na chwilę relaksu.</p>
+            <div class="position-absolute header--sentence m-0 pb-3">
+                <p class="m-0">Pozwól sobie na chwilę relaksu.</p>
+                <a href="tel:+48239234854" class="btn btn-sm btn-outline-pink d-block w-75 m-auto">Umów wizytę</a>
             </div>
         </div>
     </header>
@@ -24,14 +25,8 @@
 <main class="main--content container-fluid mx-0 position-relative">
 
     {{-- Logos --}}
-    <aside>
-        <div class="row bg-pink text-center text-light">
-            <div class="col-12 px-0">
-                <h2 class="h5 position-relative py-4 mb-0">Korzystamy z najlepszych kosmetyków na rynku</h2>
-            </div>
-        </div>
-        <div class="row">
-        <ul class="d-flex justify-content-center align-items-center w-100 p-0 pt-5 pb-3 m-0">
+    <aside class="row">
+        <ul class="d-flex justify-content-center align-items-center w-100 p-0 pb-3 m-0">
             <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/depilax.png') }}" class="w-100" alt="Depilax logo"></li>
             <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/farmona.jpg') }}" class="w-100" alt="Farmona logo"></li>
             <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/mollon.jpg') }}" class="w-100" alt="Mollon pro logo"></li>
