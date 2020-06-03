@@ -1,4 +1,6 @@
-<div class="grid">
+
+
+{{-- <div class="grid">
     @foreach ($products as $product)
     <div class="grid-item">
         <div class="card box-shadow-pink">
@@ -25,4 +27,4 @@
     </div>
     @endforeach
 
-</div>
+</div> --}}

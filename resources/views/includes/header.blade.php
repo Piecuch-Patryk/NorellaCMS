@@ -1,6 +1,8 @@
-<header class="container-fluid px-0">
+{{-- <header class="container-fluid"> --}}
     
     {{-- Slider --}}
-    @yield('slider', '')
+    {{-- @yield('slider', '') --}}
 
-</header>
+    @yield('header')
+
+{{-- </header> --}}

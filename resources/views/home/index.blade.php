@@ -2,63 +2,162 @@
 
 @section('title', 'Strona główna')
 
-@section('slider')
-<div class="row mx-0 carousel-wrap">
-    <div class="col-12 p-0">
-        <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
-            <div class="carousel-inner">
-                @for ($i = 0; $i < count($slides); $i++)
-                <div class="carousel-item {{ $i === 0 ? 'active' : '' }}">
-                    <div class="slider-image" style="background-image: url({{ asset('storage/public/slides/' . $slides[$i]->name) }})"></div>
+{{-- Header --}}
+@section('header')
+    <header class="header--home text-center container-fluid position-sticky sticky-top d-flex flex-column justify-content-center text-light px-sm-5">
+        <div class="bg--color"></div>
+        <div class="row">
+            <div class="col-12 col-md-8 col-lg-6 px-3 text-md-left mt-md-5">
+                <h1 class="mb-4 mb-md-5 mb-xl-3">Twoje Studio Urody</h1>
+                <p class="mb-4 mb-md-5">Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.</p>
+                <a href="{{ route('product.index') }}" class="btn btn-light font-weight-bold">Nasza Oferta</a>
+            </div>
+            <div class="position-absolute header--sentence m-0 pb-3">
+                <p class="m-0">Pozwól sobie na chwilę relaksu.</p>
+                <a href="tel:+48239234854" class="text-white d-md-none">Umów wizytę</a>
+            </div>
+        </div>
+        <aside class="header--aside d-none position-absolute d-lg-flex flex-column justify-content-center align-items-start text-center text-pink">
+            <div class="w-100 my-2">
+                <h6 class="h5 m-0 text-dark">Zapraszamy</h6>
+                <p class="m-0">Pn-Pt 10:00 - 18:00</p>
+                <p class="m-0">Sobota 10:00 - 13:00</p>
+            </div>
+
+            <div class="w-100 my-2">
+                <h6 class="h5 m-0 text-dark">Umów wizytę</h6>
+                <p class="m-0">+48 639 382 902</p>
+            </div>
+            <div class="w-100 my-2">
+                <h6 class="h5 m-0 text-dark">Lokalizacja</h6>
+                <p class="m-0">Jana Matejki 9</p>
+                <p class="m-0">Kędzierzyn-Koźle</p>
+                <p class="m-0">47-220</p>
+            </div>
+            <div class="w-100">
+                <a href="" class="btn btn-sm btn-primary py-0">Facebook</a>
+            </div>
+        </aside>
+    </header>
+@endsection
+
+{{-- Main --}}
+@section('content')
+<main class="main--content container-fluid mx-0 position-relative">
+
+    {{-- Logos --}}
+    <aside class="row pr-lg-5">
+        <ul class="d-flex justify-content-center justify-content-lg-around align-items-center w-100 p-0 py-5 m-0">
+            <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/depilax.png') }}" class="w-100" alt="Depilax logo"></li>
+            <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/farmona.jpg') }}" class="w-100" alt="Farmona logo"></li>
+            <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/mollon.jpg') }}" class="w-100" alt="Mollon pro logo"></li>
+            <li class="flex--list--item m-3"><img src="{{ asset('storage/assets/home-page/logos/norel.png') }}" class="w-100" alt="Norel - dr Wilsz logo"></li>
+        </ul>
+    </aside>
+
+    {{-- Products --}}
+    <div class="row overflow--x--hidden">
+        <div class="col-12 text-center text-md-left">
+            <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Norella Poleca</h2>
+        </div>
+    </div>
+
+    {{-- category - 1 --}}
+    <div class="row category--wrap category--1 py-5 mt-3 d-lg-flex">
+        <div class="col-12 col-md-7 col-lg-6 mx-md-auto mx-lg-0 text-center bg--lg--img--1">
+            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0 mr-lg-5">Zabiegi kosmetyczne na twarz</h3>
+            <ul class="p-0 py-5 pt-lg-3">
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5 my-0">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row sticky--section sticky-top">
+        <div class="col-12 col-md-7 col-lg-5 mx-md-auto text-center py-5 px-2">
+            <p class="m-0 main--sentence py-lg-5">Dbamy o to, by klientki mogły u nas odpocząć od trosk dnia codziennego i poczuć, że czas spędzony w salonie jest tylko im poświęcony.</p>
+        </div>
+    </div>
+
+    {{-- category - 2 --}}
+    <div class="row position-relative category--wrap category--2 py-5">
+        <div class="col-12 col-md-7 col-lg-6 mx-md-auto mr-lg-0 text-center bg--lg--img--2">
+            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Pielęgnacja dłoni i stóp</h3>
+            <ul class="p-0 py-5 ml-lg-auto mr-lg-0">
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5 my-0">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
+                    <div class="text-left position-relative list--decor">
+                        <h4 class="h5">Oczyszczanie twarzy</h4>
+                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                    </div>
+                    <div class="pl-1 text-pink">
+                        70zł
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 px-0">
+            <div class="bottom--btn pb-3 text-md-center py-lg-5">
+                <div class="d-lg-flex flex-lg-row justify-content-lg-center align-items-center">
+                    <a href="{{ route('product.index') }}" class="btn btn-sm btn-pink px-4 ml-5 mb-3 mx-lg-5">Zobacz wszystkie</a>
+                    <p class="d-none d-lg-inline-block mx-lg-5 text-primary">+48 639 243 932</p>
                 </div>
-                @endfor
+                <div class="d-sm-none">
+                    <a href="tel:+48948338229" class="btn btn-sm btn-pink ml-5">Umów się na wizytę</a>
+                </div>
             </div>
         </div>
     </div>
 
-    {{-- Page title --}}
-    <div class="carousel-cover text-center d-flex flex-column align-items-center justify-content-between py-5">
-        <div>
-            <h1 class="pt-3 title-decor">Najlepsze studio urody w Twojej okolicy</h1>
-            <p class="d-none d-md-block my-0 mx-sm-5 px-sm-5 py-5 header-subtitle">
-                Studio urody NORELLA to wyjątkowe miejsce w którym zadbamy o twój idealny wygląd. Przytulne, nastrojowe wnętrze i delikatna muzyka pozwolą Ci się wyciszyć, odpocząć od codziennego intensywnego tempa i skupić na swoich potrzebach. Dzięki pasji i długoletnim szkoleniom oferujemy Państwu profesjonalne usługi kosmetyczne na najwyższym poziome.
-            </p>
-            <ul class="list-unstyled py-3">
-                <li>
-                    <span class="d-block">Zapraszamy</span>
-                    <span class="d-block">Pn-Pt 10:00 - 18:00</span>
-                    <span class="d-block">Sobota 10:00 - 13:00</span>
-                </li>
-                <li>Jana Matejki 9, 47-220 Kędzierzyn-Koźle</li>
-            </ul>
-        </div>
-        <a href="tel:+4832321221" class="btn-lg btn-pink text-light box-shadow d-md-none">Umów się na wizytę</a>
-    </div>
-</div>
-@endsection
-
-
-@section('content')
-<main class="container-fluid">
-
-    <div class="row text-center py-3">
-        <div class="col-12">
-            <h2 class="title-decor">Norella poleca</h2>
-        </div>
-    </div>
-
-    {{-- Products --}}
-    @include('shared.product')
-    <div class="row text-center py-3">
-        <div class="col-12">
-            <a href="{{ route('product.index') }}" class="btn btn-outline-info px-4">Więcej</a>
-        </div>
-    </div>
-
     {{-- Slider reviews --}}
-    <div class="row my-5">
-        <div class="col-12 mb-3 text-center">
-            <h2 class="title-decor">Opinie naszych klientów</h2>
+    <div class="comments--section row position-relative overflow--x--hidden py-5">
+        <div class="col-12 mb-5 text-center">
+            <h2 class="title--decor position-relative d-inline-block py-3 mb-0 text-pink">Opinie Naszych Klientów</h2>
         </div>
         <div class="col-12 p-0">
             <div id="carousel_reviews" class="carousel slide" data-ride="carousel">
@@ -85,9 +184,16 @@
             </div>
         </div>
         <div class="col-12 text-center">
-            <a href="{{ route('review.index') }}" class="btn btn-outline-info mt-3 px-4">Pokaż wszystkie</a>
+            <a href="{{ route('review.index') }}" class="btn btn-sm btn-pink mt-5">Pokaż Wszystkie</a>
         </div>
     </div>
 
 </main>
+@endsection
+
+
+@section('script')
+<script src="{{ asset('js/navigation.js') }}">
+    
+</script>
 @endsection
