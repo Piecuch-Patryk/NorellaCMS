@@ -22,9 +22,9 @@ class CategoriesTableSeeder extends Seeder
 
         for ($i=0; $i < count($categories); $i++) { 
             $category = new Category;
-            $category->title = $categories[$i];
+            $category->category_title = $categories[$i];
 
-            if ($i%2 != 0) $category->featured = 1;
+            if ($i === 0 || $i === 3) $category->featured = 1;
 
             $category->save();
         }

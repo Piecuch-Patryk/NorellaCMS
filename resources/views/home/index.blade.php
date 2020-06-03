@@ -62,83 +62,66 @@
         </div>
     </div>
 
+    @foreach ($categories as $category)
+    @if ($loop->first)
     {{-- category - 1 --}}
     <div class="row category--wrap category--1 py-5 mt-3 d-lg-flex">
         <div class="col-12 col-md-7 col-lg-6 mx-md-auto mx-lg-0 text-center bg--lg--img--1">
-            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0 mr-lg-5">Zabiegi kosmetyczne na twarz</h3>
+            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0 mr-lg-5">{{ $category['category_title'] }}</h3>
             <ul class="p-0 py-5 pt-lg-3">
+                @foreach ($products as $product)
+                @if ($product->category_id == $category['id'] && $product->featured)
+
                 <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
                     <div class="text-left position-relative list--decor">
-                        <h4 class="h5 my-0">Oczyszczanie twarzy</h4>
-                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                        <h4 class="h5 my-0">{{ $product->title }}</h4>
+                        <p class="m-0">{{ $product->desc }}</p>
                     </div>
                     <div class="pl-1 text-pink">
-                        70zł
+                        {{ $product->price }} zł
                     </div>
                 </li>
-                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
-                    <div class="text-left position-relative list--decor">
-                        <h4 class="h5">Oczyszczanie twarzy</h4>
-                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
-                    </div>
-                    <div class="pl-1 text-pink">
-                        70zł
-                    </div>
-                </li>
-                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
-                    <div class="text-left position-relative list--decor">
-                        <h4 class="h5">Oczyszczanie twarzy</h4>
-                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
-                    </div>
-                    <div class="pl-1 text-pink">
-                        70zł
-                    </div>
-                </li>
+
+                @endif
+                @endforeach
             </ul>
         </div>
-    </div>
-
+    </div> 
+    
     <div class="row sticky--section sticky-top">
         <div class="col-12 col-md-7 col-lg-5 mx-md-auto text-center py-5 px-2">
             <p class="m-0 main--sentence py-lg-5">Dbamy o to, by klientki mogły u nas odpocząć od trosk dnia codziennego i poczuć, że czas spędzony w salonie jest tylko im poświęcony.</p>
         </div>
     </div>
 
+    @else
+    
     {{-- category - 2 --}}
     <div class="row position-relative category--wrap category--2 py-5">
         <div class="col-12 col-md-7 col-lg-6 mx-md-auto mr-lg-0 text-center bg--lg--img--2">
-            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Pielęgnacja dłoni i stóp</h3>
+            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">{{ $category['category_title'] }}</h3>
             <ul class="p-0 py-5 ml-lg-auto mr-lg-0">
+                @foreach ($products as $product)
+                @if ($product->category_id == $category['id'] && $product->featured)
+
                 <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
                     <div class="text-left position-relative list--decor">
-                        <h4 class="h5 my-0">Oczyszczanie twarzy</h4>
-                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
+                        <h4 class="h5 my-0">{{ $product->title }}</h4>
+                        <p class="m-0">{{ $product->desc }}</p>
                     </div>
                     <div class="pl-1 text-pink">
-                        70zł
+                        {{ $product->price }} zł
                     </div>
                 </li>
-                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
-                    <div class="text-left position-relative list--decor">
-                        <h4 class="h5">Oczyszczanie twarzy</h4>
-                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
-                    </div>
-                    <div class="pl-1 text-pink">
-                        70zł
-                    </div>
-                </li>
-                <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
-                    <div class="text-left position-relative list--decor">
-                        <h4 class="h5">Oczyszczanie twarzy</h4>
-                        <p class="m-0">Peeling, oczyszczanie, maska rozpulchniająca, ampułka, maska kremowa</p>
-                    </div>
-                    <div class="pl-1 text-pink">
-                        70zł
-                    </div>
-                </li>
+
+                @endif
+                @endforeach
             </ul>
         </div>
     </div>
+
+    @endif
+    @endforeach
 
     <div class="row">
         <div class="col-12 px-0">

@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->text('desc');
             $table->decimal('price', 6, 2);
             $table->string('category_id');
+            $table->boolean('featured')->default(0);
             $table->timestamps();
         });
     }

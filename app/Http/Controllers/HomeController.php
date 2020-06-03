@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-use App\Slide;
+use App\Category;
 use App\Review;
-use App\Helpers\Resolution;
+// use App\Helpers\Resolution;
 
 class HomeController extends Controller
 {
@@ -27,14 +27,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $resolution = Resolution::current();
-        $products = Product::orderBy('updated_at', 'DESC')->take(5)->get();
-        $slides = Slide::orderBy('updated_at', 'DESC')->where('resolution', '=', $resolution)->get();
+        // $resolution = Resolution::current();
+
+        $collectionCategories = Category::where('featured', '=', 1)->get();
+        $categories = $collectionCategories->toArray();
+        $categoriesIDs = $collectionCategories->pluck('id')->toArray();
+
+        $products = Product::whereIn('category_id', $categoriesIDs)->get();
         $reviews = Review::orderBy('updated_at', 'DESC')->take(5)->get();
 
         return view('home.index', [
+            'categories' => $categories,
             'products' => $products,
-            'slides' => $slides,
             'reviews' => $reviews,
         ]);
     }
