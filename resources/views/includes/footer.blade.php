@@ -1,18 +1,18 @@
 <footer class="footer container-fluid position-relative text-center bg-white">
     <div class="row position-relative footer--bg py-5">
         <div class="col-4 col-lg-2 text-center py-3 py-lg-5">
-            <h6 class="h5 text-dark">Nawigacja</h6>
+            <h6 class="h5 text-white">Nawigacja</h6>
             <ul class="list-unstyled h-75 m-0 d-flex flex-column justify-content-around">
-                <li><a href="{{ route('home.index') }}" class="text-dark">główna</a></li>
-                <li><a href="{{ route('product.index') }}" class="text-dark">oferta</a></li>
-                <li><a href="{{ route('product.showprice') }}" class="text-dark">cennik</a></li>
-                <li><a href="{{ route('review.index') }}" class="text-dark">opinie</a></li>
-                <li><a href="{{ route('gallery.index') }}" class="text-dark">galeria</a></li>
-                <li><a href="{{ route('about.index') }}" class="text-dark">o nas</a></li>
+                <li><a href="{{ route('home.index') }}" class="text-white">główna</a></li>
+                <li><a href="{{ route('product.index') }}" class="text-white">oferta</a></li>
+                <li><a href="{{ route('product.showprice') }}" class="text-white">cennik</a></li>
+                <li><a href="{{ route('review.index') }}" class="text-white">opinie</a></li>
+                <li><a href="{{ route('gallery.index') }}" class="text-white">galeria</a></li>
+                <li><a href="{{ route('about.index') }}" class="text-white">o nas</a></li>
             </ul>
         </div>
 
-        <div class="col-8 col-lg-10 d-flex flex-column justify-content-center text-center text-white py-lg-5">
+        <div class="col-8 col-lg-10 d-flex flex-column justify-content-center flex-lg-row text-center text-white py-lg-5">
             <div class="w-100 my-2">
                 <h6 class="h3 m-0 text-dark">Zapraszamy</h6>
                 <p class="m-0">Pn-Pt 10:00 - 18:00</p>

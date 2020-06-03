@@ -309,9 +309,9 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1200px;
+    width: 1000px;
     height: 500px;
-    transform: rotate(15deg) translate3d(-5%, -5%, 0);
+    transform: rotate(15deg) translate3d(5%, -15%, 0);
     opacity: .05;
     background-image: url("../storage/assets/logo/norella.png");
     background-position: center;
