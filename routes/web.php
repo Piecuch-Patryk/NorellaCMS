@@ -24,6 +24,18 @@ Route::view('zmien-haslo', 'auth.passwords.reset')
     ->name('auth.passwords.reset')
     ->middleware('auth');
 
+
+/*
+*   Dashboard
+*/
+Route::get('panel-administracyjny', [
+    'uses' => 'DashboardController@index',
+    'as' => 'dashboard.index',
+    'middleware' => 'auth'
+]);
+
+
+
 /* 
  * /Home
  * 
