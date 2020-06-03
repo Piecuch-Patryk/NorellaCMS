@@ -63,10 +63,10 @@
     </div>
 
     {{-- category - 1 --}}
-    <div class="row category--wrap category--1 py-5 mt-3">
-        <div class="col-12 col-md-7 mx-md-auto text-center">
-            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Zabiegi kosmetyczne na twarz</h3>
-            <ul class="p-0 py-5">
+    <div class="row category--wrap category--1 py-5 mt-3 d-lg-flex">
+        <div class="col-12 col-md-7 col-lg-6 mx-md-auto mx-lg-0 text-center bg--lg--img--1">
+            <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0 mr-lg-5">Zabiegi kosmetyczne na twarz</h3>
+            <ul class="p-0 py-5 pt-lg-3">
                 <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
                     <div class="text-left position-relative list--decor">
                         <h4 class="h5 my-0">Oczyszczanie twarzy</h4>
@@ -99,16 +99,16 @@
     </div>
 
     <div class="row sticky--section sticky-top">
-        <div class="col-12 col-md-7 mx-md-auto text-center py-5 px-2">
-            <p class="m-0 main--sentence">Dbamy o to, by klientki mogły u nas odpocząć od trosk dnia codziennego i poczuć, że czas spędzony w salonie jest tylko im poświęcony.</p>
+        <div class="col-12 col-md-7 col-lg-5 mx-md-auto text-center py-5 px-2">
+            <p class="m-0 main--sentence py-lg-5">Dbamy o to, by klientki mogły u nas odpocząć od trosk dnia codziennego i poczuć, że czas spędzony w salonie jest tylko im poświęcony.</p>
         </div>
     </div>
 
     {{-- category - 2 --}}
     <div class="row position-relative category--wrap category--2 py-5">
-        <div class="col-12 col-md-7 mx-md-auto text-center">
+        <div class="col-12 col-md-7 col-lg-6 mx-md-auto mr-lg-0 text-center bg--lg--img--2">
             <h3 class="h5 text-light bg-pink py-3 px-4 rounded mt-5 mb-0">Pielęgnacja dłoni i stóp</h3>
-            <ul class="p-0 py-5">
+            <ul class="p-0 py-5 ml-lg-auto mr-lg-0">
                 <li class="d-flex flex-row align-items-center bg-light rounded py-3 px-4 mb-5">
                     <div class="text-left position-relative list--decor">
                         <h4 class="h5 my-0">Oczyszczanie twarzy</h4>
@@ -142,9 +142,10 @@
 
     <div class="row">
         <div class="col-12 px-0">
-            <div class="bottom--btn pb-3 text-md-center">
-                <div>
-                    <a href="{{ route('product.index') }}" class="btn btn-sm btn-outline-pink px-4 ml-5 mb-3">Więcej</a>
+            <div class="bottom--btn pb-3 text-md-center py-lg-5">
+                <div class="d-lg-flex flex-lg-row justify-content-lg-center align-items-center">
+                    <a href="{{ route('product.index') }}" class="btn btn-sm btn-pink px-4 ml-5 mb-3 mx-lg-5">Zobacz wszystkie</a>
+                    <p class="d-none d-lg-inline-block mx-lg-5 text-primary">+48 639 243 932</p>
                 </div>
                 <div class="d-sm-none">
                     <a href="tel:+48948338229" class="btn btn-sm btn-pink ml-5">Umów się na wizytę</a>
