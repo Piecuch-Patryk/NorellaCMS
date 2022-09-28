@@ -286,23 +286,9 @@ ul {
   .category--wrap {
     background-attachment: fixed;
   }
-  .bg--lg--img--1 {
-    background-image: url("../storage/assets/home-page/bg-pink.png");
-    background-position: 80% 0;
-    background-size: cover;
-  }
-  .bg--lg--img--2 {
-    background-image: url("../storage/assets/home-page/bg-pink-2.png");
-    background-position: 20% 0;
-    background-size: cover;
-  }
   .bg--lg--img--1 h3,
   .bg--lg--img--2 h3 {
     background: none;
-  }
-  .bg--lg--img--1 ul,
-  .bg--lg--img--2 ul {
-    width: 70%;
   }
 
   .water--mark {
