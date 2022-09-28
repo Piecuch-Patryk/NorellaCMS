@@ -1,6 +1,6 @@
 <nav class="main--nav navbar navbar-expand-lg navbar-dark p-0 px-1">
     <a href="{{ route('home.index') }}">
-        <img src="{{ asset('storage/public/assets/logo/norella.png') }}" class="logo" alt="Norella logo">
+        <img src="{{ asset('storage/assets/logo/norella.png') }}" class="logo" alt="Norella logo">
     </a>
     <button class="navbar-toggler border-0 p-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
